@@ -1,0 +1,117 @@
+> (breadthsearch test1 (make-posn 0 4) (make-posn 2 2) '(n ne e se s sw w nw))
+
+Breadth-First Search:
+   Start: (0,4)
+   End: (2,2)
+   Directions: n, ne, e, se, s, sw, w, nw, 
+
+X - - - - 
+- X * * - 
+- * * * - 
+- * * X - 
+- - - - X 
+
+X = Blocked
+* = Toll
++ = Path
+
+Beginning Search!
+Current Path:(0,4)
+-Expanding Current Nodes
+-Paths Added:
+   :(0,4)->(0,3)
+   :(0,4)->(1,3)
+   :(0,4)->(1,4)
+
+Current Path:(0,4)->(0,3)
+-Expanding Current Nodes
+-Paths Added:
+   :(0,4)->(0,3)->(0,2)
+   :(0,4)->(0,3)->(1,2)
+   :(0,4)->(0,3)->(1,3)
+   :(0,4)->(0,3)->(1,4)
+
+Current Path:(0,4)->(1,3)
+-Expanding Current Nodes
+-Paths Added:
+   :(0,4)->(1,3)->(1,2)
+   :(0,4)->(1,3)->(2,2)
+   :(0,4)->(1,3)->(2,3)
+   :(0,4)->(1,3)->(2,4)
+   :(0,4)->(1,3)->(1,4)
+   :(0,4)->(1,3)->(0,3)
+   :(0,4)->(1,3)->(0,2)
+
+Current Path:(0,4)->(1,4)
+-Expanding Current Nodes
+-Paths Added:
+   :(0,4)->(1,4)->(1,3)
+   :(0,4)->(1,4)->(2,3)
+   :(0,4)->(1,4)->(2,4)
+   :(0,4)->(1,4)->(0,3)
+
+Current Path:(0,4)->(0,3)->(0,2)
+-Expanding Current Nodes
+-Paths Added:
+   :(0,4)->(0,3)->(0,2)->(0,1)
+   :(0,4)->(0,3)->(0,2)->(1,2)
+   :(0,4)->(0,3)->(0,2)->(1,3)
+
+Current Path:(0,4)->(0,3)->(1,2)
+-Expanding Current Nodes
+-Paths Added:
+   :(0,4)->(0,3)->(1,2)->(2,1)
+   :(0,4)->(0,3)->(1,2)->(2,2)
+   :(0,4)->(0,3)->(1,2)->(2,3)
+   :(0,4)->(0,3)->(1,2)->(1,3)
+   :(0,4)->(0,3)->(1,2)->(0,2)
+   :(0,4)->(0,3)->(1,2)->(0,1)
+
+Current Path:(0,4)->(0,3)->(1,3)
+-Expanding Current Nodes
+-Paths Added:
+   :(0,4)->(0,3)->(1,3)->(1,2)
+   :(0,4)->(0,3)->(1,3)->(2,2)
+   :(0,4)->(0,3)->(1,3)->(2,3)
+   :(0,4)->(0,3)->(1,3)->(2,4)
+   :(0,4)->(0,3)->(1,3)->(1,4)
+   :(0,4)->(0,3)->(1,3)->(0,2)
+
+Current Path:(0,4)->(0,3)->(1,4)
+-Expanding Current Nodes
+-Paths Added:
+   :(0,4)->(0,3)->(1,4)->(1,3)
+   :(0,4)->(0,3)->(1,4)->(2,3)
+   :(0,4)->(0,3)->(1,4)->(2,4)
+
+Current Path:(0,4)->(1,3)->(1,2)
+-Expanding Current Nodes
+-Paths Added:
+   :(0,4)->(1,3)->(1,2)->(2,1)
+   :(0,4)->(1,3)->(1,2)->(2,2)
+   :(0,4)->(1,3)->(1,2)->(2,3)
+   :(0,4)->(1,3)->(1,2)->(0,3)
+   :(0,4)->(1,3)->(1,2)->(0,2)
+   :(0,4)->(1,3)->(1,2)->(0,1)
+
+Current Path:(0,4)->(1,3)->(2,2)
+Search Successful!
+
+
+
+X - - - - 
+- X * * - 
+- * + * - 
+- + * X - 
++ - - - X 
+
+X = Blocked
+* = Toll
++ = Path
+
+Final Path:(0,4)->(1,3)->(2,2)
+Path Cost: 113/5
+Number of Paths Checked: 10
+Number of Paths Currently Stored: 34
+Number of Paths Stored Total: 42
+cpu time: 31 real time: 32 gc time: 0

@@ -1,0 +1,447 @@
+> (sort-trucks test1 goal)
+
+***********
+Steps:  1
+Distance:  0
+Estimate:  26
+Total:  26
+Open-States:  1
+Closed-States:  0
+
+07 04 02 
+08 01 03 
+05 06 -- 
+--Added 2 states
+
+***********
+Steps:  2
+Distance:  1
+Estimate:  23
+Total:  24
+Open-States:  2
+Closed-States:  1
+
+Moved:  6 to 2,2
+07 04 02 
+08 01 03 
+05 -- 06 
+--Added 2 states
+
+***********
+Steps:  3
+Distance:  2
+Estimate:  20
+Total:  22
+Open-States:  3
+Closed-States:  2
+
+Moved:  5 to 1,2
+07 04 02 
+08 01 03 
+-- 05 06 
+--Added 1 states
+
+***********
+Steps:  4
+Distance:  3
+Estimate:  17
+Total:  20
+Open-States:  3
+Closed-States:  3
+
+Moved:  8 to 0,2
+07 04 02 
+-- 01 03 
+08 05 06 
+--Added 2 states
+
+***********
+Steps:  5
+Distance:  4
+Estimate:  14
+Total:  18
+Open-States:  4
+Closed-States:  4
+
+Moved:  1 to 0,1
+07 04 02 
+01 -- 03 
+08 05 06 
+--Added 3 states
+
+***********
+Steps:  6
+Distance:  5
+Estimate:  11
+Total:  16
+Open-States:  6
+Closed-States:  5
+
+Moved:  4 to 1,1
+07 -- 02 
+01 04 03 
+08 05 06 
+--Added 2 states
+
+***********
+Steps:  7
+Distance:  6
+Estimate:  10
+Total:  16
+Open-States:  7
+Closed-States:  6
+
+Moved:  2 to 1,0
+07 02 -- 
+01 04 03 
+08 05 06 
+--Added 1 states
+
+***********
+Steps:  8
+Distance:  7
+Estimate:  9
+Total:  16
+Open-States:  7
+Closed-States:  7
+
+Moved:  3 to 2,0
+07 02 03 
+01 04 -- 
+08 05 06 
+--Added 2 states
+
+***********
+Steps:  9
+Distance:  8
+Estimate:  8
+Total:  16
+Open-States:  8
+Closed-States:  8
+
+Moved:  6 to 2,1
+07 02 03 
+01 04 06 
+08 05 -- 
+--Added 1 states
+
+***********
+Steps:  10
+Distance:  5
+Estimate:  13
+Total:  18
+Open-States:  8
+Closed-States:  9
+
+Moved:  5 to 1,1
+07 04 02 
+01 05 03 
+08 -- 06 
+--Added 2 states
+
+***********
+Steps:  11
+Distance:  6
+Estimate:  12
+Total:  18
+Open-States:  9
+Closed-States:  10
+
+Moved:  8 to 1,2
+07 04 02 
+01 05 03 
+-- 08 06 
+--Added 1 states
+
+***********
+Steps:  12
+Distance:  4
+Estimate:  14
+Total:  18
+Open-States:  9
+Closed-States:  11
+
+Moved:  7 to 0,1
+-- 04 02 
+07 01 03 
+08 05 06 
+--Added 1 states
+
+***********
+Steps:  13
+Distance:  5
+Estimate:  11
+Total:  16
+Open-States:  9
+Closed-States:  12
+
+Moved:  4 to 0,0
+04 -- 02 
+07 01 03 
+08 05 06 
+--Added 2 states
+
+***********
+Steps:  14
+Distance:  6
+Estimate:  8
+Total:  14
+Open-States:  10
+Closed-States:  13
+
+Moved:  1 to 1,0
+04 01 02 
+07 -- 03 
+08 05 06 
+--Added 3 states
+
+***********
+Steps:  15
+Distance:  7
+Estimate:  7
+Total:  14
+Open-States:  12
+Closed-States:  14
+
+Moved:  5 to 1,1
+04 01 02 
+07 05 03 
+08 -- 06 
+--Added 2 states
+
+***********
+Steps:  16
+Distance:  8
+Estimate:  6
+Total:  14
+Open-States:  13
+Closed-States:  15
+
+Moved:  8 to 1,2
+04 01 02 
+07 05 03 
+-- 08 06 
+--Added 1 states
+
+***********
+Steps:  17
+Distance:  9
+Estimate:  5
+Total:  14
+Open-States:  13
+Closed-States:  16
+
+Moved:  7 to 0,2
+04 01 02 
+-- 05 03 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  18
+Distance:  10
+Estimate:  4
+Total:  14
+Open-States:  14
+Closed-States:  17
+
+Moved:  4 to 0,1
+-- 01 02 
+04 05 03 
+07 08 06 
+--Added 1 states
+
+***********
+Steps:  19
+Distance:  11
+Estimate:  3
+Total:  14
+Open-States:  14
+Closed-States:  18
+
+Moved:  1 to 0,0
+01 -- 02 
+04 05 03 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  20
+Distance:  12
+Estimate:  2
+Total:  14
+Open-States:  15
+Closed-States:  19
+
+Moved:  2 to 1,0
+01 02 -- 
+04 05 03 
+07 08 06 
+--Added 1 states
+
+***********
+Steps:  21
+Distance:  13
+Estimate:  1
+Total:  14
+Open-States:  15
+Closed-States:  20
+
+Moved:  3 to 2,0
+01 02 03 
+04 05 -- 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  22
+Distance:  14
+Estimate:  0
+Total:  14
+Open-States:  16
+Closed-States:  21
+
+Moved:  6 to 2,1
+01 02 03 
+04 05 06 
+07 08 -- 
+
+
+
+
+***************************************
+           Solution Found!
+***************************************
+Step: 1
+
+07 04 02 
+08 01 03 
+05 06 -- 
+
+Move 6 from 1,2 to 2,2
+
+**********************
+Step: 2
+
+07 04 02 
+08 01 03 
+05 -- 06 
+
+Move 5 from 0,2 to 1,2
+
+**********************
+Step: 3
+
+07 04 02 
+08 01 03 
+-- 05 06 
+
+Move 8 from 0,1 to 0,2
+
+**********************
+Step: 4
+
+07 04 02 
+-- 01 03 
+08 05 06 
+
+Move 7 from 0,0 to 0,1
+
+**********************
+Step: 5
+
+-- 04 02 
+07 01 03 
+08 05 06 
+
+Move 4 from 1,0 to 0,0
+
+**********************
+Step: 6
+
+04 -- 02 
+07 01 03 
+08 05 06 
+
+Move 1 from 1,1 to 1,0
+
+**********************
+Step: 7
+
+04 01 02 
+07 -- 03 
+08 05 06 
+
+Move 5 from 1,2 to 1,1
+
+**********************
+Step: 8
+
+04 01 02 
+07 05 03 
+08 -- 06 
+
+Move 8 from 0,2 to 1,2
+
+**********************
+Step: 9
+
+04 01 02 
+07 05 03 
+-- 08 06 
+
+Move 7 from 0,1 to 0,2
+
+**********************
+Step: 10
+
+04 01 02 
+-- 05 03 
+07 08 06 
+
+Move 4 from 0,0 to 0,1
+
+**********************
+Step: 11
+
+-- 01 02 
+04 05 03 
+07 08 06 
+
+Move 1 from 1,0 to 0,0
+
+**********************
+Step: 12
+
+01 -- 02 
+04 05 03 
+07 08 06 
+
+Move 2 from 2,0 to 1,0
+
+**********************
+Step: 13
+
+01 02 -- 
+04 05 03 
+07 08 06 
+
+Move 3 from 2,1 to 2,0
+
+**********************
+Step: 14
+
+01 02 03 
+04 05 -- 
+07 08 06 
+
+Move 6 from 2,2 to 2,1
+
+**********************
+Step: 15
+
+01 02 03 
+04 05 06 
+07 08 -- 
+
+Done!

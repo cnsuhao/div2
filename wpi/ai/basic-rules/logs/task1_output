@@ -1,0 +1,79 @@
+Facts
+===========
+
+Task 1:
+    ai-project1 is hard
+    tech1-project2 is hard
+    jazz-comp2 is hard
+    ai-exam is fair
+    tech1-exam is easy
+    stress is 0
+    relax is 0
+    relaxtime is 5
+
+Task 2:
+    ai-project1 is hard
+    tech1-project2 is hard
+    jazz-comp2 is easy
+    ai-exam is fair
+    tech1-exam is easy
+    stress is 0
+    relax is 0
+    relaxtime is 5
+
+
+Rules (pseudocode)
+==================
+	If increase-stress flag, then increase stress set amount and clear flag
+	If stress is greater than 10, then end after declaring “mental breakdown”
+    If stress is less than 0, then end after declaring “completely relaxed”
+    If time since last relax is 0, then relax
+    If time since last relax isn’t 0, subtract 1 from relax time
+    If there is a hard task to be done, remove it and add stress
+    If there is a fair task to be done, remove it and add stress
+    If there is a easy task to be done, remove it and add stress
+
+
+
+Runs
+=============
+
+Task 1:
+    Increase stress by 3
+    Stress increased...3
+    Increase stress by 3
+    Stress increased...6
+    Increase stress by 3
+    Stress increased...9
+    Increase stress by 2
+    Stress increased...11
+    That's it!  I can't take anymore!
+
+Task 2:
+    Increase stress by 3
+    Stress increased...3
+    Increase stress by 3
+    Stress increased...6
+    Increase stress by 2
+    Stress increased...8
+    Increase stress by 1
+    Stress increased...9
+    Increase stress by 1
+    Stress increased...10
+    Ahh...Relaxation
+    Stress increased...6
+    Relax Counter now 4
+    Relax Counter now 3
+    Relax Counter now 2
+    Relax Counter now 1
+    Relax Counter now 0
+    Ahh...Relaxation
+    Stress increased...2
+    Relax Counter now 4
+    Relax Counter now 3
+    Relax Counter now 2
+    Relax Counter now 1
+    Relax Counter now 0
+    Ahh...Relaxation
+    Stress increased...-2
+    Well, it didn't kill me.  And no more stress!

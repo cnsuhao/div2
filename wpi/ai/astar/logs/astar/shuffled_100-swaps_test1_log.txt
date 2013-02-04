@@ -1,0 +1,211 @@
+(sort-trucks test3 goal)
+
+***********
+Steps:  1
+Distance:  0
+Estimate:  12
+Total:  12
+Open-States:  1
+Closed-States:  0
+
+04 01 03 
+02 08 05 
+07 06 -- 
+--Added 2 states
+
+***********
+Steps:  2
+Distance:  1
+Estimate:  9
+Total:  10
+Open-States:  2
+Closed-States:  1
+
+Moved:  6 to 2,2
+04 01 03 
+02 08 05 
+07 -- 06 
+--Added 2 states
+
+***********
+Steps:  3
+Distance:  2
+Estimate:  8
+Total:  10
+Open-States:  3
+Closed-States:  2
+
+Moved:  8 to 1,2
+04 01 03 
+02 -- 05 
+07 08 06 
+--Added 3 states
+
+***********
+Steps:  4
+Distance:  3
+Estimate:  5
+Total:  8
+Open-States:  5
+Closed-States:  3
+
+Moved:  2 to 1,1
+04 01 03 
+-- 02 05 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  5
+Distance:  4
+Estimate:  4
+Total:  8
+Open-States:  6
+Closed-States:  4
+
+Moved:  4 to 0,1
+-- 01 03 
+04 02 05 
+07 08 06 
+--Added 1 states
+
+***********
+Steps:  6
+Distance:  5
+Estimate:  3
+Total:  8
+Open-States:  6
+Closed-States:  5
+
+Moved:  1 to 0,0
+01 -- 03 
+04 02 05 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  7
+Distance:  6
+Estimate:  2
+Total:  8
+Open-States:  7
+Closed-States:  6
+
+Moved:  2 to 1,0
+01 02 03 
+04 -- 05 
+07 08 06 
+--Added 3 states
+
+***********
+Steps:  8
+Distance:  7
+Estimate:  1
+Total:  8
+Open-States:  9
+Closed-States:  7
+
+Moved:  5 to 1,1
+01 02 03 
+04 05 -- 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  9
+Distance:  8
+Estimate:  0
+Total:  8
+Open-States:  10
+Closed-States:  8
+
+Moved:  6 to 2,1
+01 02 03 
+04 05 06 
+07 08 -- 
+
+
+
+
+***************************************
+           Solution Found!
+***************************************
+Step: 1
+
+04 01 03 
+02 08 05 
+07 06 -- 
+
+Move 6 from 1,2 to 2,2
+
+**********************
+Step: 2
+
+04 01 03 
+02 08 05 
+07 -- 06 
+
+Move 8 from 1,1 to 1,2
+
+**********************
+Step: 3
+
+04 01 03 
+02 -- 05 
+07 08 06 
+
+Move 2 from 0,1 to 1,1
+
+**********************
+Step: 4
+
+04 01 03 
+-- 02 05 
+07 08 06 
+
+Move 4 from 0,0 to 0,1
+
+**********************
+Step: 5
+
+-- 01 03 
+04 02 05 
+07 08 06 
+
+Move 1 from 1,0 to 0,0
+
+**********************
+Step: 6
+
+01 -- 03 
+04 02 05 
+07 08 06 
+
+Move 2 from 1,1 to 1,0
+
+**********************
+Step: 7
+
+01 02 03 
+04 -- 05 
+07 08 06 
+
+Move 5 from 2,1 to 1,1
+
+**********************
+Step: 8
+
+01 02 03 
+04 05 -- 
+07 08 06 
+
+Move 6 from 2,2 to 2,1
+
+**********************
+Step: 9
+
+01 02 03 
+04 05 06 
+07 08 -- 
+
+Done!

@@ -1,0 +1,1549 @@
+> (sort-trucks test3 goal)
+
+***********
+Steps:  1
+Distance:  0
+Estimate:  40
+Total:  40
+Open-States:  1
+Closed-States:  0
+
+05 01 02 
+06 -- 08 
+03 07 04 
+--Added 4 states
+
+***********
+Steps:  2
+Distance:  1
+Estimate:  37
+Total:  38
+Open-States:  4
+Closed-States:  1
+
+Moved:  6 to 1,1
+05 01 02 
+-- 06 08 
+03 07 04 
+--Added 2 states
+
+***********
+Steps:  3
+Distance:  2
+Estimate:  30
+Total:  32
+Open-States:  5
+Closed-States:  2
+
+Moved:  3 to 0,1
+05 01 02 
+03 06 08 
+-- 07 04 
+--Added 1 states
+
+***********
+Steps:  4
+Distance:  3
+Estimate:  29
+Total:  32
+Open-States:  5
+Closed-States:  3
+
+Moved:  7 to 0,2
+05 01 02 
+03 06 08 
+07 -- 04 
+--Added 2 states
+
+***********
+Steps:  5
+Distance:  4
+Estimate:  24
+Total:  28
+Open-States:  6
+Closed-States:  4
+
+Moved:  4 to 1,2
+05 01 02 
+03 06 08 
+07 04 -- 
+--Added 1 states
+
+***********
+Steps:  6
+Distance:  5
+Estimate:  21
+Total:  26
+Open-States:  6
+Closed-States:  5
+
+Moved:  8 to 2,2
+05 01 02 
+03 06 -- 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  7
+Distance:  6
+Estimate:  20
+Total:  26
+Open-States:  7
+Closed-States:  6
+
+Moved:  6 to 2,1
+05 01 02 
+03 -- 06 
+07 04 08 
+--Added 3 states
+
+***********
+Steps:  8
+Distance:  7
+Estimate:  15
+Total:  22
+Open-States:  9
+Closed-States:  7
+
+Moved:  3 to 1,1
+05 01 02 
+-- 03 06 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  9
+Distance:  8
+Estimate:  12
+Total:  20
+Open-States:  10
+Closed-States:  8
+
+Moved:  5 to 0,1
+-- 01 02 
+05 03 06 
+07 04 08 
+--Added 1 states
+
+***********
+Steps:  10
+Distance:  9
+Estimate:  11
+Total:  20
+Open-States:  10
+Closed-States:  9
+
+Moved:  1 to 0,0
+01 -- 02 
+05 03 06 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  11
+Distance:  10
+Estimate:  8
+Total:  18
+Open-States:  11
+Closed-States:  10
+
+Moved:  3 to 1,0
+01 03 02 
+05 -- 06 
+07 04 08 
+--Added 3 states
+
+***********
+Steps:  12
+Distance:  11
+Estimate:  5
+Total:  16
+Open-States:  13
+Closed-States:  11
+
+Moved:  4 to 1,1
+01 03 02 
+05 04 06 
+07 -- 08 
+--Added 2 states
+
+***********
+Steps:  13
+Distance:  12
+Estimate:  4
+Total:  16
+Open-States:  14
+Closed-States:  12
+
+Moved:  8 to 1,2
+01 03 02 
+05 04 06 
+07 08 -- 
+--Added 1 states
+
+***********
+Steps:  14
+Distance:  13
+Estimate:  5
+Total:  18
+Open-States:  14
+Closed-States:  13
+
+Moved:  6 to 2,2
+01 03 02 
+05 04 -- 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  15
+Distance:  12
+Estimate:  6
+Total:  18
+Open-States:  15
+Closed-States:  14
+
+Moved:  7 to 1,2
+01 03 02 
+05 04 06 
+-- 07 08 
+--Added 1 states
+
+***********
+Steps:  16
+Distance:  11
+Estimate:  7
+Total:  18
+Open-States:  15
+Closed-States:  15
+
+Moved:  5 to 1,1
+01 03 02 
+-- 05 06 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  17
+Distance:  12
+Estimate:  8
+Total:  20
+Open-States:  16
+Closed-States:  16
+
+Moved:  1 to 0,1
+-- 03 02 
+01 05 06 
+07 04 08 
+--Added 1 states
+
+***********
+Steps:  18
+Distance:  12
+Estimate:  8
+Total:  20
+Open-States:  16
+Closed-States:  17
+
+Moved:  7 to 0,1
+01 03 02 
+07 05 06 
+-- 04 08 
+--Added 1 states
+
+***********
+Steps:  19
+Distance:  13
+Estimate:  5
+Total:  18
+Open-States:  16
+Closed-States:  18
+
+Moved:  4 to 0,2
+01 03 02 
+07 05 06 
+04 -- 08 
+--Added 2 states
+
+***********
+Steps:  20
+Distance:  14
+Estimate:  4
+Total:  18
+Open-States:  17
+Closed-States:  19
+
+Moved:  8 to 1,2
+01 03 02 
+07 05 06 
+04 08 -- 
+--Added 1 states
+
+***********
+Steps:  21
+Distance:  15
+Estimate:  5
+Total:  20
+Open-States:  17
+Closed-States:  20
+
+Moved:  6 to 2,2
+01 03 02 
+07 05 -- 
+04 08 06 
+--Added 2 states
+
+***********
+Steps:  22
+Distance:  14
+Estimate:  6
+Total:  20
+Open-States:  18
+Closed-States:  21
+
+Moved:  5 to 1,2
+01 03 02 
+07 -- 06 
+04 05 08 
+--Added 3 states
+
+***********
+Steps:  23
+Distance:  11
+Estimate:  9
+Total:  20
+Open-States:  20
+Closed-States:  22
+
+Moved:  6 to 1,1
+01 03 02 
+05 06 -- 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  24
+Distance:  10
+Estimate:  10
+Total:  20
+Open-States:  21
+Closed-States:  23
+
+Moved:  2 to 1,0
+01 02 -- 
+05 03 06 
+07 04 08 
+--Added 1 states
+
+***********
+Steps:  25
+Distance:  11
+Estimate:  11
+Total:  22
+Open-States:  21
+Closed-States:  24
+
+Moved:  6 to 2,0
+01 02 06 
+05 03 -- 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  26
+Distance:  12
+Estimate:  8
+Total:  20
+Open-States:  22
+Closed-States:  25
+
+Moved:  3 to 2,1
+01 02 06 
+05 -- 03 
+07 04 08 
+--Added 3 states
+
+***********
+Steps:  27
+Distance:  13
+Estimate:  5
+Total:  18
+Open-States:  24
+Closed-States:  26
+
+Moved:  4 to 1,1
+01 02 06 
+05 04 03 
+07 -- 08 
+--Added 2 states
+
+***********
+Steps:  28
+Distance:  14
+Estimate:  4
+Total:  18
+Open-States:  25
+Closed-States:  27
+
+Moved:  8 to 1,2
+01 02 06 
+05 04 03 
+07 08 -- 
+--Added 1 states
+
+***********
+Steps:  29
+Distance:  14
+Estimate:  6
+Total:  20
+Open-States:  25
+Closed-States:  28
+
+Moved:  7 to 1,2
+01 02 06 
+05 04 03 
+-- 07 08 
+--Added 1 states
+
+***********
+Steps:  30
+Distance:  13
+Estimate:  7
+Total:  20
+Open-States:  25
+Closed-States:  29
+
+Moved:  5 to 1,1
+01 02 06 
+-- 05 03 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  31
+Distance:  14
+Estimate:  8
+Total:  22
+Open-States:  26
+Closed-States:  30
+
+Moved:  1 to 0,1
+-- 02 06 
+01 05 03 
+07 04 08 
+--Added 1 states
+
+***********
+Steps:  32
+Distance:  14
+Estimate:  8
+Total:  22
+Open-States:  26
+Closed-States:  31
+
+Moved:  7 to 0,1
+01 02 06 
+07 05 03 
+-- 04 08 
+--Added 1 states
+
+***********
+Steps:  33
+Distance:  15
+Estimate:  5
+Total:  20
+Open-States:  26
+Closed-States:  32
+
+Moved:  4 to 0,2
+01 02 06 
+07 05 03 
+04 -- 08 
+--Added 2 states
+
+***********
+Steps:  34
+Distance:  16
+Estimate:  4
+Total:  20
+Open-States:  27
+Closed-States:  33
+
+Moved:  8 to 1,2
+01 02 06 
+07 05 03 
+04 08 -- 
+--Added 1 states
+
+***********
+Steps:  35
+Distance:  16
+Estimate:  6
+Total:  22
+Open-States:  27
+Closed-States:  34
+
+Moved:  5 to 1,2
+01 02 06 
+07 -- 03 
+04 05 08 
+--Added 3 states
+
+***********
+Steps:  36
+Distance:  15
+Estimate:  7
+Total:  22
+Open-States:  29
+Closed-States:  35
+
+Moved:  3 to 2,2
+01 02 06 
+05 04 -- 
+07 08 03 
+--Added 2 states
+
+***********
+Steps:  37
+Distance:  16
+Estimate:  6
+Total:  22
+Open-States:  30
+Closed-States:  36
+
+Moved:  6 to 2,1
+01 02 -- 
+05 04 06 
+07 08 03 
+--Added 1 states
+
+***********
+Steps:  38
+Distance:  13
+Estimate:  9
+Total:  22
+Open-States:  30
+Closed-States:  37
+
+Moved:  2 to 1,1
+01 -- 06 
+05 02 03 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  39
+Distance:  15
+Estimate:  7
+Total:  22
+Open-States:  31
+Closed-States:  38
+
+Moved:  6 to 1,1
+01 03 02 
+07 06 -- 
+04 05 08 
+--Added 2 states
+
+***********
+Steps:  40
+Distance:  16
+Estimate:  6
+Total:  22
+Open-States:  32
+Closed-States:  39
+
+Moved:  5 to 2,1
+01 03 02 
+07 -- 05 
+04 08 06 
+--Added 3 states
+
+***********
+Steps:  41
+Distance:  13
+Estimate:  9
+Total:  22
+Open-States:  34
+Closed-States:  40
+
+Moved:  5 to 0,2
+01 03 02 
+-- 04 06 
+05 07 08 
+--Added 2 states
+
+***********
+Steps:  42
+Distance:  14
+Estimate:  8
+Total:  22
+Open-States:  35
+Closed-States:  41
+
+Moved:  4 to 0,1
+01 03 02 
+04 -- 06 
+05 07 08 
+--Added 3 states
+
+***********
+Steps:  43
+Distance:  14
+Estimate:  8
+Total:  22
+Open-States:  37
+Closed-States:  42
+
+Moved:  4 to 2,1
+01 03 02 
+05 -- 04 
+07 08 06 
+--Added 3 states
+
+***********
+Steps:  44
+Distance:  15
+Estimate:  7
+Total:  22
+Open-States:  39
+Closed-States:  43
+
+Moved:  5 to 1,1
+01 03 02 
+-- 05 04 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  45
+Distance:  14
+Estimate:  8
+Total:  22
+Open-States:  40
+Closed-States:  44
+
+Moved:  2 to 2,1
+01 03 -- 
+05 04 02 
+07 08 06 
+--Added 1 states
+
+***********
+Steps:  46
+Distance:  15
+Estimate:  7
+Total:  22
+Open-States:  40
+Closed-States:  45
+
+Moved:  3 to 2,0
+01 -- 03 
+05 04 02 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  47
+Distance:  16
+Estimate:  8
+Total:  24
+Open-States:  41
+Closed-States:  46
+
+Moved:  1 to 1,0
+-- 01 03 
+05 04 02 
+07 08 06 
+--Added 1 states
+
+***********
+Steps:  48
+Distance:  16
+Estimate:  8
+Total:  24
+Open-States:  41
+Closed-States:  47
+
+Moved:  1 to 0,1
+-- 03 02 
+01 05 04 
+07 08 06 
+--Added 1 states
+
+***********
+Steps:  49
+Distance:  16
+Estimate:  8
+Total:  24
+Open-States:  41
+Closed-States:  48
+
+Moved:  7 to 0,1
+01 03 02 
+07 05 04 
+-- 08 06 
+--Added 1 states
+
+***********
+Steps:  50
+Distance:  15
+Estimate:  9
+Total:  24
+Open-States:  41
+Closed-States:  49
+
+Moved:  8 to 1,1
+01 03 02 
+05 08 04 
+07 -- 06 
+--Added 2 states
+
+***********
+Steps:  51
+Distance:  15
+Estimate:  9
+Total:  24
+Open-States:  42
+Closed-States:  50
+
+Moved:  6 to 1,1
+01 03 02 
+04 06 -- 
+05 07 08 
+--Added 2 states
+
+***********
+Steps:  52
+Distance:  14
+Estimate:  10
+Total:  24
+Open-States:  43
+Closed-States:  51
+
+Moved:  1 to 0,1
+-- 03 02 
+01 04 06 
+05 07 08 
+--Added 1 states
+
+***********
+Steps:  53
+Distance:  17
+Estimate:  7
+Total:  24
+Open-States:  43
+Closed-States:  52
+
+Moved:  8 to 1,1
+01 03 02 
+07 08 05 
+04 -- 06 
+--Added 2 states
+
+***********
+Steps:  54
+Distance:  14
+Estimate:  10
+Total:  24
+Open-States:  44
+Closed-States:  53
+
+Moved:  1 to 1,0
+-- 01 06 
+05 02 03 
+07 04 08 
+--Added 1 states
+
+***********
+Steps:  55
+Distance:  17
+Estimate:  7
+Total:  24
+Open-States:  44
+Closed-States:  54
+
+Moved:  2 to 2,0
+01 -- 02 
+05 04 06 
+07 08 03 
+--Added 2 states
+
+***********
+Steps:  56
+Distance:  17
+Estimate:  7
+Total:  24
+Open-States:  45
+Closed-States:  55
+
+Moved:  2 to 1,1
+01 -- 06 
+07 02 03 
+04 05 08 
+--Added 2 states
+
+***********
+Steps:  57
+Distance:  17
+Estimate:  7
+Total:  24
+Open-States:  46
+Closed-States:  56
+
+Moved:  3 to 2,2
+01 02 06 
+07 05 -- 
+04 08 03 
+--Added 2 states
+
+***********
+Steps:  58
+Distance:  18
+Estimate:  6
+Total:  24
+Open-States:  47
+Closed-States:  57
+
+Moved:  6 to 2,1
+01 02 -- 
+07 05 06 
+04 08 03 
+--Added 1 states
+
+***********
+Steps:  59
+Distance:  15
+Estimate:  9
+Total:  24
+Open-States:  47
+Closed-States:  58
+
+Moved:  2 to 0,0
+02 -- 06 
+01 05 03 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  60
+Distance:  15
+Estimate:  9
+Total:  24
+Open-States:  48
+Closed-States:  59
+
+Moved:  5 to 0,2
+01 02 06 
+-- 04 03 
+05 07 08 
+--Added 2 states
+
+***********
+Steps:  61
+Distance:  16
+Estimate:  8
+Total:  24
+Open-States:  49
+Closed-States:  60
+
+Moved:  4 to 0,1
+01 02 06 
+04 -- 03 
+05 07 08 
+--Added 3 states
+
+***********
+Steps:  62
+Distance:  12
+Estimate:  12
+Total:  24
+Open-States:  51
+Closed-States:  61
+
+Moved:  2 to 2,1
+01 03 -- 
+05 06 02 
+07 04 08 
+--Added 1 states
+
+***********
+Steps:  63
+Distance:  13
+Estimate:  11
+Total:  24
+Open-States:  51
+Closed-States:  62
+
+Moved:  3 to 2,0
+01 -- 03 
+05 06 02 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  64
+Distance:  12
+Estimate:  12
+Total:  24
+Open-States:  52
+Closed-States:  63
+
+Moved:  8 to 2,1
+01 03 02 
+05 06 08 
+07 04 -- 
+--Added 1 states
+
+***********
+Steps:  65
+Distance:  15
+Estimate:  9
+Total:  24
+Open-States:  52
+Closed-States:  64
+
+Moved:  7 to 1,1
+01 03 02 
+-- 07 06 
+04 05 08 
+--Added 2 states
+
+***********
+Steps:  66
+Distance:  16
+Estimate:  8
+Total:  24
+Open-States:  53
+Closed-States:  65
+
+Moved:  4 to 0,1
+01 03 02 
+04 07 06 
+-- 05 08 
+--Found duplicate closed state in -1, 0 direction
+----Kept old state
+--Added 0 states
+
+***********
+Steps:  67
+Distance:  15
+Estimate:  9
+Total:  24
+Open-States:  52
+Closed-States:  66
+
+Moved:  3 to 1,1
+01 -- 02 
+07 03 06 
+04 05 08 
+--Added 2 states
+
+***********
+Steps:  68
+Distance:  16
+Estimate:  8
+Total:  24
+Open-States:  53
+Closed-States:  67
+
+Moved:  2 to 1,0
+01 02 -- 
+07 03 06 
+04 05 08 
+--Found duplicate closed state in 0, -1 direction
+----Kept old state
+--Added 0 states
+
+***********
+Steps:  69
+Distance:  16
+Estimate:  8
+Total:  24
+Open-States:  52
+Closed-States:  68
+
+Moved:  2 to 2,1
+01 03 -- 
+07 05 02 
+04 08 06 
+--Added 1 states
+
+***********
+Steps:  70
+Distance:  17
+Estimate:  7
+Total:  24
+Open-States:  52
+Closed-States:  69
+
+Moved:  3 to 2,0
+01 -- 03 
+07 05 02 
+04 08 06 
+--Added 2 states
+
+***********
+Steps:  71
+Distance:  13
+Estimate:  11
+Total:  24
+Open-States:  53
+Closed-States:  70
+
+Moved:  3 to 0,0
+03 -- 02 
+01 05 06 
+07 04 08 
+--Added 2 states
+
+***********
+Steps:  72
+Distance:  14
+Estimate:  10
+Total:  24
+Open-States:  54
+Closed-States:  71
+
+Moved:  2 to 1,0
+03 02 -- 
+01 05 06 
+07 04 08 
+--Added 1 states
+
+***********
+Steps:  73
+Distance:  8
+Estimate:  16
+Total:  24
+Open-States:  54
+Closed-States:  72
+
+Moved:  7 to 0,1
+05 01 02 
+07 03 06 
+-- 04 08 
+--Added 1 states
+
+***********
+Steps:  74
+Distance:  9
+Estimate:  13
+Total:  22
+Open-States:  54
+Closed-States:  73
+
+Moved:  4 to 0,2
+05 01 02 
+07 03 06 
+04 -- 08 
+--Added 2 states
+
+***********
+Steps:  75
+Distance:  10
+Estimate:  12
+Total:  22
+Open-States:  55
+Closed-States:  74
+
+Moved:  8 to 1,2
+05 01 02 
+07 03 06 
+04 08 -- 
+--Added 1 states
+
+***********
+Steps:  76
+Distance:  11
+Estimate:  13
+Total:  24
+Open-States:  55
+Closed-States:  75
+
+Moved:  6 to 2,2
+05 01 02 
+07 03 -- 
+04 08 06 
+--Added 2 states
+
+***********
+Steps:  77
+Distance:  12
+Estimate:  10
+Total:  22
+Open-States:  56
+Closed-States:  76
+
+Moved:  3 to 2,1
+05 01 02 
+07 -- 03 
+04 08 06 
+--Added 3 states
+
+***********
+Steps:  78
+Distance:  13
+Estimate:  11
+Total:  24
+Open-States:  58
+Closed-States:  77
+
+Moved:  8 to 1,1
+05 01 02 
+07 08 03 
+04 -- 06 
+--Added 2 states
+
+***********
+Steps:  79
+Distance:  7
+Estimate:  17
+Total:  24
+Open-States:  59
+Closed-States:  78
+
+Moved:  4 to 1,1
+05 01 02 
+03 04 06 
+07 -- 08 
+--Added 2 states
+
+***********
+Steps:  80
+Distance:  8
+Estimate:  16
+Total:  24
+Open-States:  60
+Closed-States:  79
+
+Moved:  8 to 1,2
+05 01 02 
+03 04 06 
+07 08 -- 
+--Added 1 states
+
+***********
+Steps:  81
+Distance:  9
+Estimate:  17
+Total:  26
+Open-States:  60
+Closed-States:  80
+
+Moved:  6 to 2,2
+05 01 02 
+03 04 -- 
+07 08 06 
+--Added 2 states
+
+***********
+Steps:  82
+Distance:  8
+Estimate:  18
+Total:  26
+Open-States:  61
+Closed-States:  81
+
+Moved:  7 to 1,2
+05 01 02 
+03 04 06 
+-- 07 08 
+--Added 1 states
+
+***********
+Steps:  83
+Distance:  13
+Estimate:  13
+Total:  26
+Open-States:  61
+Closed-States:  82
+
+Moved:  7 to 1,1
+05 01 02 
+-- 07 03 
+04 08 06 
+--Added 2 states
+
+***********
+Steps:  84
+Distance:  14
+Estimate:  10
+Total:  24
+Open-States:  62
+Closed-States:  83
+
+Moved:  5 to 0,1
+-- 01 02 
+05 07 03 
+04 08 06 
+--Added 1 states
+
+***********
+Steps:  85
+Distance:  15
+Estimate:  9
+Total:  24
+Open-States:  62
+Closed-States:  84
+
+Moved:  1 to 0,0
+01 -- 02 
+05 07 03 
+04 08 06 
+--Added 2 states
+
+***********
+Steps:  86
+Distance:  16
+Estimate:  8
+Total:  24
+Open-States:  63
+Closed-States:  85
+
+Moved:  2 to 1,0
+01 02 -- 
+05 07 03 
+04 08 06 
+--Added 1 states
+
+***********
+Steps:  87
+Distance:  17
+Estimate:  7
+Total:  24
+Open-States:  63
+Closed-States:  86
+
+Moved:  3 to 2,0
+01 02 03 
+05 07 -- 
+04 08 06 
+--Added 2 states
+
+***********
+Steps:  88
+Distance:  18
+Estimate:  6
+Total:  24
+Open-States:  64
+Closed-States:  87
+
+Moved:  6 to 2,1
+01 02 03 
+05 07 06 
+04 08 -- 
+--Added 1 states
+
+***********
+Steps:  89
+Distance:  19
+Estimate:  7
+Total:  26
+Open-States:  64
+Closed-States:  88
+
+Moved:  8 to 2,2
+01 02 03 
+05 07 06 
+04 -- 08 
+--Added 2 states
+
+***********
+Steps:  90
+Distance:  20
+Estimate:  4
+Total:  24
+Open-States:  65
+Closed-States:  89
+
+Moved:  7 to 1,2
+01 02 03 
+05 -- 06 
+04 07 08 
+--Added 3 states
+
+***********
+Steps:  91
+Distance:  21
+Estimate:  3
+Total:  24
+Open-States:  67
+Closed-States:  90
+
+Moved:  5 to 1,1
+01 02 03 
+-- 05 06 
+04 07 08 
+--Added 2 states
+
+***********
+Steps:  92
+Distance:  22
+Estimate:  2
+Total:  24
+Open-States:  68
+Closed-States:  91
+
+Moved:  4 to 0,1
+01 02 03 
+04 05 06 
+-- 07 08 
+--Added 1 states
+
+***********
+Steps:  93
+Distance:  23
+Estimate:  1
+Total:  24
+Open-States:  68
+Closed-States:  92
+
+Moved:  7 to 0,2
+01 02 03 
+04 05 06 
+07 -- 08 
+--Added 2 states
+
+***********
+Steps:  94
+Distance:  24
+Estimate:  0
+Total:  24
+Open-States:  69
+Closed-States:  93
+
+Moved:  8 to 1,2
+01 02 03 
+04 05 06 
+07 08 -- 
+
+
+
+
+***************************************
+           Solution Found!
+***************************************
+Step: 1
+
+05 01 02 
+06 -- 08 
+03 07 04 
+
+Move 6 from 0,1 to 1,1
+
+**********************
+Step: 2
+
+05 01 02 
+-- 06 08 
+03 07 04 
+
+Move 3 from 0,2 to 0,1
+
+**********************
+Step: 3
+
+05 01 02 
+03 06 08 
+-- 07 04 
+
+Move 7 from 1,2 to 0,2
+
+**********************
+Step: 4
+
+05 01 02 
+03 06 08 
+07 -- 04 
+
+Move 4 from 2,2 to 1,2
+
+**********************
+Step: 5
+
+05 01 02 
+03 06 08 
+07 04 -- 
+
+Move 8 from 2,1 to 2,2
+
+**********************
+Step: 6
+
+05 01 02 
+03 06 -- 
+07 04 08 
+
+Move 6 from 1,1 to 2,1
+
+**********************
+Step: 7
+
+05 01 02 
+03 -- 06 
+07 04 08 
+
+Move 3 from 0,1 to 1,1
+
+**********************
+Step: 8
+
+05 01 02 
+-- 03 06 
+07 04 08 
+
+Move 7 from 0,2 to 0,1
+
+**********************
+Step: 9
+
+05 01 02 
+07 03 06 
+-- 04 08 
+
+Move 4 from 1,2 to 0,2
+
+**********************
+Step: 10
+
+05 01 02 
+07 03 06 
+04 -- 08 
+
+Move 8 from 2,2 to 1,2
+
+**********************
+Step: 11
+
+05 01 02 
+07 03 06 
+04 08 -- 
+
+Move 6 from 2,1 to 2,2
+
+**********************
+Step: 12
+
+05 01 02 
+07 03 -- 
+04 08 06 
+
+Move 3 from 1,1 to 2,1
+
+**********************
+Step: 13
+
+05 01 02 
+07 -- 03 
+04 08 06 
+
+Move 7 from 0,1 to 1,1
+
+**********************
+Step: 14
+
+05 01 02 
+-- 07 03 
+04 08 06 
+
+Move 5 from 0,0 to 0,1
+
+**********************
+Step: 15
+
+-- 01 02 
+05 07 03 
+04 08 06 
+
+Move 1 from 1,0 to 0,0
+
+**********************
+Step: 16
+
+01 -- 02 
+05 07 03 
+04 08 06 
+
+Move 2 from 2,0 to 1,0
+
+**********************
+Step: 17
+
+01 02 -- 
+05 07 03 
+04 08 06 
+
+Move 3 from 2,1 to 2,0
+
+**********************
+Step: 18
+
+01 02 03 
+05 07 -- 
+04 08 06 
+
+Move 6 from 2,2 to 2,1
+
+**********************
+Step: 19
+
+01 02 03 
+05 07 06 
+04 08 -- 
+
+Move 8 from 1,2 to 2,2
+
+**********************
+Step: 20
+
+01 02 03 
+05 07 06 
+04 -- 08 
+
+Move 7 from 1,1 to 1,2
+
+**********************
+Step: 21
+
+01 02 03 
+05 -- 06 
+04 07 08 
+
+Move 5 from 0,1 to 1,1
+
+**********************
+Step: 22
+
+01 02 03 
+-- 05 06 
+04 07 08 
+
+Move 4 from 0,2 to 0,1
+
+**********************
+Step: 23
+
+01 02 03 
+04 05 06 
+-- 07 08 
+
+Move 7 from 1,2 to 0,2
+
+**********************
+Step: 24
+
+01 02 03 
+04 05 06 
+07 -- 08 
+
+Move 8 from 2,2 to 1,2
+
+**********************
+Step: 25
+
+01 02 03 
+04 05 06 
+07 08 -- 
+
+Done!

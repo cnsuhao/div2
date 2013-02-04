@@ -1,0 +1,26 @@
+<html>
+<head>
+
+<title>Key Mapping Demo</title>
+
+<link href="keymap.css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Key Mapping Demo</h1>
+<p><strong>Instructions:</strong>Simply press the "Setup Key Bindings button".  Anything mapable will turn orange immediately.  Then, select the UI element you want to map by clicking on it.  Finally, press the button on the keyboard you want to use as a map (except f5 and esc which are reserved for browser refreshing and closing the mapping respectively.)  Once you have it mapped, exit mapping by clicking the button again or pressing escape.  <em>Currently does not work in IE (only tested with 8)</em></p>
+<p>
+It should be noted that the current solution is beyond hacky but shows promise and can certainly be made into a library if needed.
+</p>
+<h2>Buttons</h2>
+<div id="buttons"></div>
+<button id="setup">Setup Key Bindings</button>
+<hr/>
+<h2>Settings</h2>
+<h4>Unchecked = momentary, checked = toggle</h4>
+<div id="settings"></div>
+
+<script src="../jquery-1.3.2.js"></script>
+<script src="keycodes.js"></script>
+<script src="keymap.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html>
+<head>
+<style>
+#contact_form table {width: 380px;}
+input {width: 300px;}
+th  {width: 80px; }
+textarea { width: 380px; height: 300px;}
+
+table { z-index: 1 }
+
+#instructions { height: 40px; width: 480px; display: block; }
+body { margin: 0; padding: 0 }
+#overlays {
+	position:absolute;
+	z-index: 1000;
+	top: 0; left: 0;
+}
+
+.help_overlay {
+	opacity: .4;
+	background-color: #33a;
+	border: 2px solid #009;
+	z-index: 1000;
+	position: absolute;
+	display: block;
+	float: left;
+}
+
+body.get_help { cursor: help }
+body.get_help * { cursor: help !important; }
+
+</style>
+</head>
+<body>
+
+    <h1>Help Overlays</h1>
+    <p>A prototype for a jQuery plugin to create clickable, transparent overlays on any tag with a "help" attribute.  This would allow for the user to just click "What's this" and get the help information.  This is the same purpose as a tooltip, but the added affordance of showing which elements have more information.  Other versions could just as easily have different behavior such as showing help modal, panel, or window.</p> <hr/>
+
+
+<div id="overlays">
+</div>
+<button id="enable_help">What is...?</button>
+<h1>Contact Us</h1>
+<form id="contact_form">
+<table>
+<tr>
+	<th><label for="name">Name:</label></th>
+	<td><input name="name" type="text" id="name_field" help="Type your name"/></td>
+</tr>
+<tr>
+	<th><label for="email">Email:</label></th>
+	<td><input name="email" type="text" id="email_field" help="Enter a valid email address"/></td>
+</tr>
+<tr>
+	<th><label for="subject">Subject:</label></th>
+	<td><input name="subject" type="text"  id="subject_field" help="Tell use why you are contacting us"/></td>
+</tr>
+<tr>
+	<td colspan="2">
+		<b><label for="message">Message:</label></b><br/>
+		<textarea name="message" id="message_field" help="Describe in detail any issues you are having"></textarea>
+	</td>
+</tr>
+<tr>
+<td></td>
+<td><button help="Click here (once) to send us your message when you are done." id="submit_button">Submit</button></td>
+</table>
+</form>
+<div id="instructions"></div>
+
+<script src="../jquery-1.3.2.js"></script>
+<script src="help_overlays.js"></script>
+</body>
+</html>

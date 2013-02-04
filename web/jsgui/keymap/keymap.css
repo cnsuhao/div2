@@ -1,0 +1,41 @@
+#buttons td {
+	width: 50px;
+	height: 50px;
+	background-color: #b0b0b0;
+	font-weight: bold;
+	font-size: 22px;
+	vertical-align: middle;
+	text-align: center;
+	border: 3px solid black;
+	cursor: pointer;
+}
+
+#buttons td.on {
+	background-color: #FFF600;
+}
+
+body .keybind_overlay {
+	display: none;
+}
+
+body.keybinding .keybind_overlay {
+	display: block;
+	background-color: #ff8800;
+	opacity: .7;
+	position: absolute;
+	padding: 2px;
+}
+
+body.keybinding .selected {
+	background-color: #ffd000;
+	border: 2px solid white;
+	padding: 0px;
+}
+
+body .mapping {
+	background-color: #dbdbdb;
+	border: 1px solid #b0b0b0;
+	padding: 1px 2px;
+	position: absolute;
+	font-size: 10px;
+}

@@ -1,0 +1,73 @@
+body,div { margin: 0; padding: 0; }
+
+body { width: 900px; background-color: #ffd085;}
+
+#main {
+	height: 200px;
+	width: 100%;
+	background-color: #feb;
+}
+
+#main h1 {
+	font-size: 72px;
+	margin: 0px;
+	padding: 24px;
+	margin-left: 10px;
+}
+
+#main h2 {
+	font-style: italic;
+	float: right;
+	padding: 0; margin: 0;
+	margin-right: 20px;
+}
+
+#nav {
+	height: 100px;
+	background-color: #e00000;
+	color: white;
+	font-size: 24px;
+}
+
+#nav h3, #nav h4{ padding: 0; margin: 0; }
+#nav h3 { padding-top: 18px; margin-left: 8px; }
+
+#nav h4 {
+	float: right;
+	margin-top: 14px;
+	margin-right: 40px;
+}
+
+#page { width:900px; }
+
+#content { float:left; padding: 16px 0px; width: 700px; border-right: 200px #da4 solid; margin-right: -200px; background-color: white; }
+#content p { margin: 0px; padding: 8px 24px; clear:both; }
+
+#content p a { display:block; position: relative; margin-top: 6px; margin-bottom: 32px; margin-right: 54px; float:right;}
+
+#sidepanel { 
+	display: block;
+	float: right;
+	width: 200px;
+	margin-left: -200px;
+}
+
+#floating_box {
+	margin: 0px 24px;
+	padding: 0px 12px;
+	background-color: white;
+	border: 2px dashed #ddd;
+	font-size: 24px;
+	width: 128px;
+	top: 24px;
+}
+
+#footer {
+	clear: both;
+	text-align: center;
+	background-color: #b40;
+	color: white;
+	font-weight: bold;
+	padding: 15px;
+	margin-bottom: 700px;
+}

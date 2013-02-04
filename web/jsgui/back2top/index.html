@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Back to Top</title>
+<link href="back2top.css" rel="stylesheet"/>
+</head>
+<body>
+<a name="top"></a>
+
+<div id="navbar">
+  <div id="return">Click here to go back to where you were</div>
+</div>
+<hr/>
+
+<h1>Better Back To Top</h1>
+
+<p>Sometimes a user might want to just hop back to the top of a document, but then be able to go right back.  This can be especially true for any metadata at the top, or a table of contents.  This page creates a link to send the user right back to there place.</p>
+
+<p>Future features:  jump to any location in a document, not just back to the top. Similar to vim's ``. Link back could eventually fade out or disappear once the user starts to scroll.</p>
+
+
+<div id="lorem"></div>
+<hr/>
+
+<script src="../jquery-1.3.2.js"></script>
+<script src="back2top.js"></script>
+
+<script src="http://json-lipsum.appspot.com/?amount=5&what=words&callback=build_navbar"></script>
+<script src="http://json-lipsum.appspot.com/?amount=20&what=paras&callback=build_lorem"></script>
+</body>
+</html>

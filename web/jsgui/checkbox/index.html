@@ -1,0 +1,107 @@
+<html>
+<head>
+
+<title>Default Filter Test</title>
+
+<link href="filters.css" type="text/css" rel="stylesheet"/>
+
+<script src="jquery-1.6.3.min.js" type="text/javascript"></script>
+<script src="utils.js" type="text/javascript"></script>
+<script src="checkboxdefaults.js" type="text/javascript"></script>
+<script src="filters.js" type="text/javascript"></script>
+
+<script>
+
+</script>
+
+<style>
+#sidebar {
+	width: 200px;
+	float: left;
+}
+
+#info { 
+	font-size: 1.75em;
+	white-space: pre-wrap;
+	margin-left: 230px;
+}
+</style>
+
+</head>
+<body>
+<h1>Default Checkbox Demo</h1>
+<p>This is an example of how checkboxes could work with defaults (ie for filtering lists where having nothing selected makes no sense).  The controls are simple, click a checkbox to toggle, double click a label to only select that field, and double click a heading to toggle all 
+on and off.  The checkboxes update themselves, behave nicely if anything fails, and "fetch" a new page when changed.  They also save their state in the url fragment so any configuration can be bookmarked and reloaded.</p>
+<div id="sidebar"><form id="filters"></form></div>
+
+<script>
+var filters = [
+	[ "stat:Status",
+	        "+upcoming:Upcoming", 
+			"+active:Active", 
+			"-past:Past"],
+	[ "eval:Evaulations",
+	        "+complete:Complete",
+			"+withdrawn:Withdrawn",
+			"+noeval:No Eval/F"],
+	[ "div:Division",
+			"+div1:Division I",
+			"+div2:Division II",
+			"+div3:Division III",
+			"+unassigned:Unassigned"],
+	[ "typ:Type",
+			"+class:Class",
+			"+indep:Independent Study",
+			"+ta:Teaching Assistant",
+			"+la:Learning Activity",
+			"-cocur:Co-Curricular" ]
+];
+
+//loop through filters and generate proper html
+var sidebar = document.getElementById("filters");
+for (var f=0; f<filters.length; f++) {
+	var filter = filters[f];
+	var name = filter[0].split(":");
+    var id = name[0];
+	
+	var form = document.createElement("fieldset");
+	form.id = id;
+	form.className="filter";
+	var title = document.createElement("legend");
+	title.innerHTML = name[1];
+	form.appendChild(title);
+	
+	for (var i=1; i<filter.length; i++) {
+		var elem = filter[i];
+		var dflt = elem[0] == "+";
+		elem = elem.substring(1).split(":");
+		
+		var div = document.createElement("div");
+		
+		var inp = document.createElement("input");
+		inp.type="checkbox";
+		inp.setAttribute("default", dflt);
+		inp.name = id;
+		inp.value = elem[0];
+		inp.id = id + "_" + elem[0];
+		
+		var label = document.createElement("label");
+		label.htmlFor = inp.id;
+		label.innerHTML = elem[1];
+		
+		div.appendChild(inp);
+		div.appendChild(label);
+		form.appendChild(div);
+	}
+	
+	sidebar.appendChild(form);
+}
+
+</script>
+
+</div>
+
+<p id="info"></p>
+</body>
+</html>
+

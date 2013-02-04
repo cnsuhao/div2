@@ -1,0 +1,68 @@
+/*
+.filter input[type=checkbox]{
+	visibility: hidden;
+}
+
+.loaded .filter input[type=checkbox]{
+	visibility: visible;
+}
+*/
+fieldset {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+fieldset div
+{
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+div > input
+{
+	padding: 0;
+	margin: 0;
+	height: 16px;
+	width: 16px;
+	float: left;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}
+div > label 
+{ 
+	float: left; 
+	line-height: 16px; 
+	padding: 0 0 0 18px;
+}
+
+div > input + label {
+	background: url(gr_custom-inputs.png) 0 -1px no-repeat;
+	height: 16px;
+}
+
+.default div > input + label { background-image: url(gr_custom-inputs_grey.png); }
+
+div > input[type=checkbox]:checked + label,
+.default div > input[type=checkbox][default=true] + label { background-position: 0 -81px; }
+
+div > input[type=checkbox]:hover:checked + label,
+div > input[type=checkbox]:checked + label:hover,
+.default div > input[type=checkbox][default=true]:hover + label,
+.default div > input[type=checkbox][default=true] + label:hover  { background-position: 0 -101px; }
+
+div > input[type=checkbox]:active + label,
+div > input[type=checkbox] + label:hover:active,
+.default div > input[type=checkbox]:active + label,
+.default div > input[type=checkbox] + label:hover:active	{ background-position: 0 -41px; }
+
+div > input[type=checkbox]:active:checked + label,
+div > input[type=checkbox]:checked + label:hover:active,
+.default div > input[type=checkbox][default=true]:active + label,
+.default div > input[type=checkbox][default=true] + label:hover:active				{ background-position: 0 -121px; }
+
+div > input[type=checkbox]:hover + label,
+div > input[type=checkbox] + label:hover 							{ background-position: 0 -21px; }

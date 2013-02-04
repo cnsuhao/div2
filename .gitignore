@@ -1,0 +1,10 @@
+*.mov
+*.swp
+*.pyg
+*.toc
+*.log
+*~
+*.aux
+*.pyc
+.idea
+boko

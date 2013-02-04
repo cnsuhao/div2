@@ -33,3 +33,5 @@ You can stream the videos bellow.
  * [Part 4](http://stout.hampshire.edu/~acg10/waking/Waking_Act_4.mov)
 
 To download, you can save the above links, or use `download.sh`.
+
+`TODO: screenshots here?`

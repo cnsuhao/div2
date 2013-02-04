@@ -8,7 +8,6 @@ def main():
     pygame.init()
     pygame.display.set_mode((1024, 768))
     pygame.display.set_caption("Super Coin Get v1.0")
-    pygame.display.toggle_fullscreen()
 
     # create game
     app = Application(MainMenu)

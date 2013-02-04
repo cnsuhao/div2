@@ -7,8 +7,6 @@ get". As the term went on, I kept adding more and more features as
 examples of polish and showing what could be done with the concepts we
 had learned in class. The end result was **Super Coin Get**.
 
-![Super Coin Get](https://github.com/alecgoebel/div2/raw/master/games/supercoinget/screenshot.png "Super Coin Get")
-
 ## Gameplay
 Your goal is to get the coins. That's it. Though every time you collect
 one coin, two spawn. Careful though, they dissappear after a while.
@@ -27,3 +25,6 @@ one coin, two spawn. Careful though, they dissappear after a while.
 ## Requirements
  * python 2.6+
  * pygame
+
+![Super Coin Get](https://github.com/alecgoebel/div2/raw/master/games/supercoinget/screenshot.png "Super Coin Get")
+

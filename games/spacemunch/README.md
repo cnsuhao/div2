@@ -5,7 +5,7 @@ crash course into python, pygame, and 2D sprite games. I ran this crash
 course as a prep for a 38-hour gamejam being held later in the week. The
 gameplay is based loosely on space invaders.
 
-![Space Munch Screenshot](https://github.com/alecgoebel/div2/games/spacemunch/screenshot.png)
+![Space Munch Screenshot](https://raw.github.com/alecgoebel/div2/master/games/spacemunch/screenshot.png)
 
 ## Gamplay:
 The player is spawned in a world full of munches.  They must defeat them all while avoiding being shot.

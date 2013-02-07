@@ -3,9 +3,7 @@
 ## Folders
 
  * **course**: All the course code the students had access to as
-   well as a selection of the internal repo from **CS112: Introduction
-   to Programming with Python and Pygame**. This includes the homework
-   assignments, class code, and sample code for the final projects.
+   well as a selection of the internal repo from the pygame course.
  * **games** All projects involving game development.
  * **gamification** The final document from my gamification independent study.
  * **tex** The latex files used to generate my final portfolio

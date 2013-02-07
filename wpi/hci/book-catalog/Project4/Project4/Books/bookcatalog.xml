@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Books>
+    <Book>
+      <Genre>Mystery</Genre>
+      <Author>Agatha Christie</Author>
+      <Title>The Murder of Roger Ackroyd</Title>
+    </Book>
+    <Book>
+      <Genre>Fiction</Genre>
+      <Author>Michael Crichton</Author>
+      <Title>State of Fear</Title>
+    </Book>
+    <Book>
+      <Genre>Romance</Genre>
+      <Author>Karen Hawkins</Author>
+      <Title>Her Master and Commander</Title>
+    </Book>
+    <Book>
+      <Genre>Fiction</Genre>
+      <Author>Dan Brown</Author>
+      <Title>Angels and Demons</Title>
+    </Book>
+    <Book>
+      <Genre>Fiction</Genre>
+      <Author>Niccolo Machiavelli</Author>
+      <Title>The Prince</Title>
+    </Book>
+    <Book>
+      <Genre>Science Fiction</Genre>
+      <Author>Ray Bradbury</Author>
+      <Title>Something Wicked this Way Comes</Title>
+    </Book>
+    <Book>
+      <Genre>Mystery</Genre>
+      <Author>James Patterson</Author>
+      <Title>The 5th Horseman</Title>
+    </Book>
+    <Book>
+      <Genre>Horror</Genre>
+      <Author>Edgar Allen Poe</Author>
+      <Title>The Cask of Amontillado</Title>
+    </Book>
+    <Book>
+      <Genre>Humor</Genre>
+      <Author>Jon Stewart</Author>
+      <Title>America (The Book): A Citizen's Guide to Democracy Inaction</Title>
+    </Book>
+    <Book>
+      <Genre>Humor</Genre>
+      <Author>Lewis Black</Author>
+      <Title>Nothing's Sacred</Title>
+    </Book>
+    <Book>
+      <Genre>Children's</Genre>
+      <Author>Stan and Jan Berenstain</Author>
+      <Title>The Berenstain Bears Learn about Strangers</Title>
+    </Book>
+    <Book>
+      <Genre>History</Genre>
+      <Author>Thomas R. Rumsey</Author>
+      <Title>Men and Women of the Renaissance and Reformation</Title>
+    </Book>
+    <Book>
+      <Genre>Foreign Language</Genre>
+      <Author>Edward Swick</Author>
+      <Title>The Everything Learning German Book: Speak, Write, and Understand in No Time</Title>
+    </Book>
+    <Book>
+      <Genre>Autobiography</Genre>
+      <Author>Michael Crichton</Author>
+      <Title>Travels</Title>
+    </Book>
+    <Book>
+      <Genre>History</Genre>
+      <Author>David Criswell</Author>
+      <Title>The Rise and Fall of the Holy Roman Empire: From Charlemagne to Napoleon</Title>
+    </Book>
+    <Book>
+      <Genre>Children's</Genre>
+      <Author>Dr. Seuss</Author>
+      <Title>The Sneetches and Other Stories</Title>
+    </Book>
+  </Books>
+</Catalog>

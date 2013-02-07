@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Reading Portion</title>
+<link rel="stylesheet" type="text/css" href="linespace.css">
+</head>
+<body>
+<div class="b">
+<p>In the field of computer science, the term <i>thread</i> is short for <i>thread of execution</i>.  Threads allow a program to split itself into two or more running sets of instructions.  In layman’s terms, a thread could be thought of as a miniature program created by another.</p>
+
+<p>Multiple threads are executed in parallel, but not necessarily simultaneously.  When more than one thread is running on a single processor, the processor switches between the threads.  This is called time splicing.  Because modern machines run so quickly, there is an illusion of multiple threads running simultaneously.  This would allow a program to do such things as draw graphics and get user input at the same time.  If you consider an operating system like Windows a program, every other “program” is multithreaded (for example, running Word, iTunes, and Firefox all at the same time.)  On machines with multiple processors or “cores,” when each processor is assigned a single thread the threads will run simultaneously.</p>
+
+<p>There is a large difference between a process and a thread.  A process has its own resources allocated to it, such as memory, file handles, sockets, device handles, and windows.  Processes each take up their own chunk of RAM (random access memory) and file resources.  This is why a user cannot modify a file in Windows if another program is using it.  Threads, on the other hand, exist within processes (each process has at least one thread.)  If a process is multithreaded then each thread shares the process’s resources.</p>
+
+</p>Once there is more than on thread, storing anything as simple as a number becomes remarkably complicated.  If it takes more than one instruction to update a value, there can be concurrency issues.  For Example:  <br/>
+<table class="b"><tr><td>
+Let us say that there is a value of 10 stored as X.  There are also two threads, A and B.  First, Thread A wants to add 1 to X and save it, so it starts by getting the value which is 10.  Before A can finish, it goes to sleep and Thread B starts.  Thread B has decided that it will set X to 5 then B goes to sleep.  Now, when A wakes up, it still thinks X is 10, so it adds 1 and stores X as 11 when it should be 6.
+</td></tr></table>
+
+Concurrency issues such as this can cause bugs that are hard to replicate since the processor will switch threads at different times each time it runs.</p>
+
+<p>Many APIs (Application Programming Interfaces) get around this issue by allowing programmers to synchronize primitives, such as integers and characters.  Synchronizing a primitive creates a sort of a bathroom key where only one thread has access to the primitive at a time.  The other threads must wait until it is there turn before even reading the value.  This can cause a program to run more slowly but prevents many errors.</p>
+<p>Without multithreading modern operating systems would not be possible.  From allowing us to have sound effects in video games to allowing us to run multiple pieces of software at once, threads are one of the major factors in modern computing.</p>
+</div>
+<hr/>
+<h3><a href="./quiz.html">Proceed to quiz</a><h3>
+</body>
+</html>

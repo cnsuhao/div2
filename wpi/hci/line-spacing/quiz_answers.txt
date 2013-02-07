@@ -1,0 +1,14 @@
+ANSWERS:
+B
+A
+C
+B
+C
+
+F all
+
+thread of execution
+slowly
+never runs the same way
+2
+still thought it was 10

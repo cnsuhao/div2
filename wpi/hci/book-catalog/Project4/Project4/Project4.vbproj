@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C578E52-2115-435F-BD36-C22DDE1A2C3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>HCIProject4.My.MyApplication</StartupObject>
+    <RootNamespace>HCIProject4</RootNamespace>
+    <AssemblyName>HCIProject4</AssemblyName>
+    <MyType>WindowsForms</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HCIProject4.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HCIProject4.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Book.vb" />
+    <Compile Include="BrowseGenre.Designer.vb">
+      <DependentUpon>BrowseGenre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseGenre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseLetters.Designer.vb">
+      <DependentUpon>BrowseLetters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseLetters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseMain.Designer.vb">
+      <DependentUpon>BrowseMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalog.vb" />
+    <Compile Include="BrowseLettersGK.Designer.vb">
+      <DependentUpon>BrowseLettersGK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseLettersGK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseLettersLP.Designer.vb">
+      <DependentUpon>BrowseLettersLP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseLettersLP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseLettersQU.Designer.vb">
+      <DependentUpon>BrowseLettersQU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseLettersQU.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseLettersVZ.Designer.vb">
+      <DependentUpon>BrowseLettersVZ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseLettersVZ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseLettersAF.Designer.vb">
+      <DependentUpon>BrowseLettersAF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseLettersAF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseResults.Designer.vb">
+      <DependentUpon>BrowseResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUser.Designer.vb">
+      <DependentUpon>EditUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreenReg.Designer.vb">
+      <DependentUpon>MainScreenReg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreenReg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUser.Designer.vb">
+      <DependentUpon>CreateUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.Designer.vb">
+      <DependentUpon>LoginScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WishlistDisplay.Designer.vb">
+      <DependentUpon>WishlistDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WishlistDisplay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.vb">
+      <DependentUpon>MainScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchResults.Designer.vb">
+      <DependentUpon>SearchResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchMain.Designer.vb">
+      <DependentUpon>SearchMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainState.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Serializable.vb" />
+    <Compile Include="User.vb" />
+    <Compile Include="ViewBook.Designer.vb">
+      <DependentUpon>ViewBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BrowseGenre.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrowseGenre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseLetters.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrowseLetters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BrowseMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseLettersGK.resx">
+      <DependentUpon>BrowseLettersGK.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseLettersLP.resx">
+      <DependentUpon>BrowseLettersLP.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseLettersQU.resx">
+      <DependentUpon>BrowseLettersQU.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseLettersVZ.resx">
+      <DependentUpon>BrowseLettersVZ.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseLettersAF.resx">
+      <DependentUpon>BrowseLettersAF.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseResults.resx">
+      <DependentUpon>BrowseResults.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUser.resx">
+      <DependentUpon>EditUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreenReg.resx">
+      <DependentUpon>MainScreenReg.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUser.resx">
+      <DependentUpon>CreateUser.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WishlistDisplay.resx">
+      <DependentUpon>WishlistDisplay.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchResults.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBook.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViewBook.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Books\bookcatalog.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Users\readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

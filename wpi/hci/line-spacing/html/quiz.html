@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>
+Comprehension Quiz
+</title>
+</head>
+<body>
+
+<h1>Post Reading Questions</h1>
+<br/>
+<h4>These questions are designed to test your comprehension and how much was retained from the reading.  You may opt out of any question by selecting "don't know" for the answer.  Please call the instructer over before hitting submit.</h4>
+<br/><br/>
+<form method="post" 
+   ACTION="http://www.north.londonmet.ac.uk/remailer/nph-remailer.cgi">
+<INPUT TYPE="hidden" NAME="SendEmailTo" VALUE="agoebel.hciresults@gmail.com"\>
+<INPUT TYPE="HIDDEN" NAME="ApplicationName" VALUE="HCI Project 2"\>
+<INPUT TYPE="HIDDEN" NAME="RequiredFields" VALUE="myname,myemail,qm1,qm2,qm3,qm4,qm5,qt1,qt2,qt3,qt4,qt5,qs1,qs2,qs3,qs4,qs5,time"\>
+<input type="hidden" name="OnSuccess" value="./thankyou.html"\>
+Name:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="myname"\><br/>
+Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="myemail"\>
+<hr/>
+<h3>MULTIPLE CHOICE QUESTIONS:</h3>
+<h5>Select the best answer</h5>
+<br/>
+<b>1.)&nbsp;&nbsp;
+Unless explicitly allowed, most programs cannot modify files another program is using.  This is because of:<br/></b>
+<input type="radio" name="qm1" value="a"/>Concurrency issues between threads<br/>
+<input type="radio" name="qm1" value="b"/>Each process has its own file handles<br/>
+<input type="radio" name="qm1" value="c"/>Another thread overwriting the file handle<br/>
+<input type="radio" name="qm1" value="d"/>Don't Know<br/><br/>
+
+<b>2.)&nbsp;&nbsp;
+Time splicing is:<br/></b>
+<input type="radio" name="qm2" value="a"/>One way computers create the illusion of running two threads simultaneously<br/></b>
+<input type="radio" name="qm2" value="b"/>Dividing the time each process has to run evenly<br/>
+<input type="radio" name="qm2" value="c"/>A measurement of how long each thread runs<br/>
+<input type="radio" name="qm2" value="d"/>Don't Know<br/><br/>
+
+<b>3.)&nbsp;&nbsp;
+Since threads have access to the same chunk of RAM, it can cause:<br/></b>
+<input type="radio" name="qm3" value="a"/>Slower programs<br/>
+<input type="radio" name="qm3" value="b"/>Inability to take advantage of a multi-core machine<br/>
+<input type="radio" name="qm3" value="c"/>Concurrency issues<br/>
+<input type="radio" name="qm3" value="d"/>Don't Know<br/><br/>
+
+<b>4.)&nbsp;&nbsp;
+Thread A set X to the wrong value because:<br/></b>
+<input type="radio" name="qm4" value="a"/>X was in a different part of the memory<br/>
+<input type="radio" name="qm4" value="b"/>It took more than one instruction to change the value of X<br/>
+<input type="radio" name="qm4" value="c"/>Thread B changed the value of X<br/>
+<input type="radio" name="qm4" value="d"/>Don't Know<br/><br/>
+
+<b>5.)&nbsp;&nbsp;
+Which of the following is not a primitive?<br/></b>
+<input type="radio" name="qm5" value="a"/>Character<br/>
+<input type="radio" name="qm5" value="b"/>Integer<br/>
+<input type="radio" name="qm5" value="c"/>File Handle<br/>
+<input type="radio" name="qm5" value="d"/>Don't Know<br/><br/>
+
+<hr/>
+<h3>True/False:</h3>
+<br/>
+
+<b>1.)&nbsp;&nbsp;
+Threads run simultaneously on all machines.<br/></b>
+<input type="radio" name="qt1" value="true"/>True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="qt1" value="fals"/>False<br/><br/>
+
+<b>2.)&nbsp;&nbsp;
+Threads each have their own chunk of RAM.<br/></b>
+<input type="radio" name="qt2" value="true"/>True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="qt2" value="fals"/>False<br/><br/>
+
+<b>3.)&nbsp;&nbsp;
+Windows and other operating systems are not multithreaded.<br/></b>
+<input type="radio" name="qt3" value="true"/>True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="qt3" value="fals"/>False<br/><br/>
+
+<b>4.)&nbsp;&nbsp;
+A thread contains at least one process.<br/></b>
+<input type="radio" name="qt4" value="true"/>True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="qt4" value="fals"/>False<br/><br/>
+
+<b>5.)&nbsp;&nbsp;
+Threads can at least read the value of a synchronized primitive when they do not have the “key”.<br/></b>
+<input type="radio" name="qt5" value="true"/>True&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="qt5" value="fals"/>False<br/><br/>
+
+<hr/>
+<h3>Short Answer</h3>
+<br/>
+
+<b>1.)&nbsp;&nbsp;
+Thread is short for:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="qs1"/><br/><br/>
+
+<b>2.)&nbsp;&nbsp;
+Using synchronization can cause a program to run:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="qs2"/><br/><br/>
+
+<b>3.)&nbsp;&nbsp;
+Concurrency issues are hard to fix because:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="qs3"/><br/><br/>
+
+<b>4.)&nbsp;&nbsp;
+How many threads/processes can a dual core machine run truly simultaneously?</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="qs4"/><br/><br/>
+
+<b>5.)&nbsp;&nbsp;
+When Thread B changed X to 5, what happened when Thread A woke up?</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="qs5"/><br/><br/>
+
+<hr/>
+<h2>*****CALL FACILITATOR OVER AT THIS TIME*****</h2>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+Reading time(min:secs.nano)&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="time"\><br/>
+<input type="submit" value="Submit test"/>
+</form>
+</body>
+</html>

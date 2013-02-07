@@ -1,0 +1,11 @@
+Tester Instructions:
+====================
+ * Confirm user is not a CS major or does not have a history in CS
+ * Confirm that user has little to no experience in “threads” or “multithreading”
+ * Hand user consent form to read over and have them sign a different copy
+ * Read the following instructions once user has signed copy
+ * Select a quiz so there are an even number of results from each
+ * Time how long it takes the user to complete reading
+ * When user is done with quiz and calls you over, enter time within field
+ * Submit results
+ * Hand over all consent forms when completed

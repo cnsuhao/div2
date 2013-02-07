@@ -1,0 +1,21 @@
+{% load wiki_extras %}
+
+{% get_all wiki.Page as all_pages %}
+{% get_all wiki.Design as all_designs %}
+
+<h4>List of all Pages:</h4>
+
+<ul>
+{% for pg in all_pages %}
+<li><a href="{{pg.slug}}">{{pg.title}}</a></li>
+{% endfor %}
+</ul>
+<h4>List of all Designs:</h4>
+<ul>
+{% for d in all_designs %}
+{% if d.public %}
+<li><a href="{{wiki_url}}{{d.slug}}/{{page.slug}}">{{d.name}}</a></li>
+{% endif %}
+{% endfor %}
+</ul>
+<a href="{{wiki_url}}upload">Upload a new design!</a>

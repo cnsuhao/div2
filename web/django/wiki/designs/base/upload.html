@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %}Edit {{page.title}}{% endblock %}
+
+{% block content %}
+<h1>Upload Design</h1>
+Slug will be generated from filename
+<form action="." method="POST" enctype="multipart/form-data">
+{{form.as_p}}
+<input type="submit" value="Upload"/>
+</form>
+{% endblock %}

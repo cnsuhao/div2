@@ -1,0 +1,97 @@
+-All managers need console commands (preferably automated)
+-messaging system
+-lots of hooks
+-Engine should have a "glue" file/structure, a single place to handle replacements and requirements
+
+
+Modules:
+	modules have a variety of requirements:
+		other modules:  for specific interfaces
+		Compatibilities: flags, functionality
+	req can be hard or soft
+	modules have configurable options
+	modules have default settings
+
+	modules have levels:
+		plugin
+		application
+		system
+		core
+	
+	They all fail differently and have different warnings
+	
+	Module methods are mostly hooks so debugging pieces are automatic
+		except in the core
+	
+	Other pieces as you go
+	
+
+
+features needed for rapid coding:
+	callbacks/hooks/closures
+	typing hidden
+	
+	scripted for the most part:
+		AI scripted
+	
+	get a main loop up and running
+	set buttons
+	add entities
+		expand existing code
+	GUI
+	
+
+
+
+
+
+C4 Core:
+	Math, Util library:  include adapters
+	Time Manager:  Just that
+
+	Memory Manager: debug tools, custom allocator, multiple heaps, small block pools
+	File Manager:  loads files into memory, probably out of blocks
+	Resource:  File System, Packing Util
+	Device Manager:  Joysticks, webcams...
+
+	System:  threads, semaphorse, commands, vars, logging, mutexes
+
+"" System:
+	Rendering (OpenGL, DirectX, etc)
+	Display Manager: monitors etc
+	Input Manager: (watches devices)
+	Graphics:  "Renderables", Textures, Vertex Buff, Camera, Light, Shadow, Post
+	
+	Sound: mixer, wav, streaming, decomp, soundflow, effects, 3d
+	Network: sockets (udp), connections, fault, encryption
+
+
+"" Large-Scale:
+	Interface: windows, viewports, controls, input events, menu
+	Scene Graph: (type) camera, lights, effects, markers?, geom, zones/portals, triggers, sound sources
+	Message Manager: client-server, message distribution, message combining
+	
+	Effect Manager: interface panels, surface markings, lighting effects, particles, fluid, cloth
+	Animation: models, blending, skinning
+	Controller: messages, character controller, projectile controller, scripts, functions
+	
+	Plugin Manager
+	World manager:  Light management, shadow construction, visibility determination, collision detection
+	
+"" Plugins:
+	Texture Viewer/Importer
+	Collada Importer
+	World Editor
+	Sound Player
+	Font Generator
+	Movie Player
+	Extras: special effects/controllers
+	
+"" Application:
+	Game
+
+
+
+
+
+

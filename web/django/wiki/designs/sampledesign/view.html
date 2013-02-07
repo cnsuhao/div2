@@ -1,0 +1,15 @@
+{% extends design.base_template %}
+{% load markup %}
+
+{% block title %}Sample Design - {{page.title}}{% endblock %}
+
+{% block body %}
+<h1>{{page.title}}</h1>
+<div id="last_updated">{{page.last_updated|date:"f A F d Y"}} </div>
+<div id="tools">
+	<a href="/edit/{{design}}{{page.url}}">Edit</a>
+</div>
+<div id="page_text">
+{{page.content|markdown}}
+</div>
+{% endblock %}

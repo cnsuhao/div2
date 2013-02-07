@@ -1,0 +1,15 @@
+{% extends "wiki/base.html" %}
+
+{% block title %}Confirm Delete{% endblock %}
+
+{% block content %}
+<h1>Confirm Delete</h1>
+<p>Are you sure that you would like to delete {{design.name}}?</p>
+<form method="POST" action="">
+<ul>
+<li><input type="submit" value="Yes" /></li>
+</form>
+<li><a href="{{ next }}">Cancel</a></li>
+</ul>
+</form>
+{% endblock %}

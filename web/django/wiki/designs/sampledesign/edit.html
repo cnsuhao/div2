@@ -1,0 +1,15 @@
+{% extends design.base_template %}
+{% load markup %}
+
+{% block title %}Edit {{page.title}}{% endblock %}
+
+{% block body %}
+
+<h1>Edit "{{page.title}}"</h1>
+<form action="" method="POST">
+<table>
+{{form.as_table}}
+</table>
+<input id="save" type="submit" value="Save"/>
+</form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "wiki/base.html" %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{media_url}}/css/main.css"></link>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="{{media_url}}/js/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("a[@href*=http]").each(function() {
+			$(this).after('<img src="{{media_url}}/img/icon-external-link.png"/>');
+		});
+		
+		$("#new_page").click(function() {
+			var url =
+		});
+	});
+	
+</script>
+{% endblock %}
+
+{% block content %}
+<div id="page">
+	<div id="banner">{% include "sampledesign/banner.html" %}</div>
+	<div id="body">
+		<div id="nav">{% include "sampledesign/nav.html" %}</div>
+		<div id="text">{% block body %}{% endblock %}</div>
+		<div class="clear"></div>
+	</div>
+	<div id="copyright">&copy; Copyright 2008</div>
+</div>
+{% endblock %}

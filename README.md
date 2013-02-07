@@ -10,7 +10,8 @@ I cannot be sure what is and what isn't my code.
  * **course**: All the course code the students had access to as
    well as a selection of the internal repo from the pygame course.
  * **games** All projects involving game development.
- * **misc** Everything else
+ * **other** Everything else
+ * **prog** Programming topics (Libraries, APIs, DSLs)
  * **tex** The latex files used to generate my final portfolio
  * **web** All projects related to web programming, front and backend.
  * **wpi** All homeworks/projects I found from my days at WPI.

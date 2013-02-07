@@ -1,0 +1,19 @@
+Advanced game engine:
+
+Tools:
+	Logging
+	Debug
+	
+	EventManager
+	InputManager
+	SceneManager
+	DisplayManager
+	SoundManager
+	GameManager
+	
+	Advanced loop
+	
+	Server Integration?
+	Animation
+	Shaders
+	Sound

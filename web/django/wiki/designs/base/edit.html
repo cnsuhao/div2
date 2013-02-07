@@ -1,0 +1,14 @@
+{% extends "wiki/base.html" %}
+{% load markup %}
+
+{% block title %}Edit {{page.title}}{% endblock %}
+
+{% block content %}
+<h1>Edit {{page.title}}</h1>
+
+<form action="" method="POST">
+	{{form.as_p}}
+	<input type="submit" value="Save"/>
+</form>
+
+{% endblock %}

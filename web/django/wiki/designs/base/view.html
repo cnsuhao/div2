@@ -1,0 +1,23 @@
+{% extends "wiki/base.html" %}
+{% load markup %}
+
+{% block title %}{{page.title}}{% endblock %}
+
+{% block content %}
+<h1>{{page.title}}</h1>
+<div class="tools">
+    {% if page.editable %}
+    [<a href="edit/{{page.slug}}">Edit</a>]
+    {% else %}
+    [Locked]
+    {% endif %}
+</div>
+
+<hr/>
+
+{{page.content|markdown}}
+
+<hr/>
+
+<div id="last_updated">Last Updated at {{page.last_updated}} </div>
+{% endblock %}

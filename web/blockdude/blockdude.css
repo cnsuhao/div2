@@ -1,0 +1,51 @@
+#game table {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	empty-cells: show;
+}
+#game .row {
+	display: block;
+}
+
+#game .row > span {
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	padding: 0px;
+	margin: 0px;
+	position: relative;
+}
+
+#game .row > span.wall {
+	background-color: black;
+}
+
+#game .row > span.exit {
+	background-color: blue;
+	width: 30px;
+	height: 30px;
+}
+
+#game .block {
+	background-color: yellow;
+	width: 28px;
+	height: 28px;
+	border: 1px solid black;
+}
+
+#player {
+	background-color: red;
+	width: 28px;
+	height: 28px;
+	border: 1px solid black;
+}
+
+#player.left {
+	width: 24px;
+	border-left: 5px solid black;
+}
+
+#player.right {
+	width: 24px;
+	border-right: 5px solid black;
+}

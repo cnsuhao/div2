@@ -1,0 +1,14 @@
+{% extends 'wiki/base.html' %}
+
+{% block title %}Design List{% endblock %}
+
+{% block content %}
+<h1>Your Designs</h1>
+<hr/>
+<ul>
+{% for design in design_list %}
+<li>{{design.name}} | <a href="{{design.slug}}">Edit</a>-<a href="delete/{{design.slug}}">Delete</a></li>
+{% endfor %}
+<li><a href="create">Create New</a></li>
+</ul>
+{% endblock %}

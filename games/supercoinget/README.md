@@ -12,6 +12,8 @@ Your goal is to get the coins. That's it. Though every time you collect
 one coin, two spawn. Careful though, they dissappear after a while.
 
 ## Features
+The features I was attempting to demonstrate by the end of the project included:
+
  * shadow layers
  * depth sorted sprites
  * custom collisions

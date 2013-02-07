@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="charselect_load_title">Select a Hero</string>
+    
+    <string name="charselect_general_title">General</string>
+    <string name="charselect_general_name">Name:</string>
+    <string name="charselect_general_race">Race:</string>
+    <string name="charselect_general_class">Class:</string>
+    
+    
+    
+    
+    <string name="charselect_color_title">Colors</string>
+    <string name="charselect_color_eye">Eye</string>
+    <string name="charselect_color_skin">Skin</string>
+    <string name="charselect_color_hair">Hair</string>
+    
+    <string-array name="charselect_align_labels_cols">
+    	<item>"Order"</item>
+    	<item>" "</item>
+    	<item>"Chaos"</item>
+    </string-array>
+    
+    <string-array name="charselect_align_labels_rows">
+    	<item>Good</item>
+    	<item>" "</item>
+    	<item>Evil</item>
+    </string-array>
+    
+    
+    <string name="charselect_align_title">Alignment</string>
+    <string name="charselect_align_law">Order</string>
+    <string name="charselect_align_chaos">Chaos</string>
+    <string name="charselect_align_good">Light</string>
+    <string name="charselect_align_evil">Dark</string>
+    <string name="charselect_align_neutral"></string>
+    
+    <string name="charselect_stats_title">Stats</string>
+    <string name="charselect_stats_rand">Roll</string>
+</resources>

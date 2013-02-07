@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Platform Generation Prototype</title>
+
+<style>
+.level {
+	background-color: #888;
+	display: block;
+	width: 432px; 
+	height: 648px;
+	margin: 10px;
+	float: left;
+}
+
+.level div {
+	height: 18px;
+	width: 432px;
+	background-color: #ff000044;
+}
+
+.level div span {
+	position: relative;
+	display: block;
+	float: right;
+	background-color: #00f;
+	opacity: 0.5;
+	height: 18px;
+	text-align: right;
+}
+
+.level div span:first-child {
+	background-color: #f00;
+	float: left;
+	text-align: left;
+}
+</style>
+
+<script type="text/javascript" src="../js/util/random.js"></script>
+<script>
+var TILE_SIZE = 18;
+var LEVEL = [25, 36];
+var BLOCK = [3, 2];
+var BORDER = [1, 1];
+
+var prng = new Math.Random(new Date()+'');
+var gaps = [];
+
+var map = [];
+
+function initMap() {
+	var n = LEVEL[1]/BLOCK[1];
+	var low = 0 + BORDER[0];
+	var high = LEVEL[0] - BORDER[0] - BLOCK[0];
+	
+	for (var i=0; i<n; i++) {
+		var g = parseInt(prng.rand()*(high-low) + low);
+		gaps.push(g);
+	}
+}
+
+function placeGaps() {
+	for (var i=0; i<LEVEL[1]; i++) {
+		var x = gaps[parseInt(i/2)];
+		var l = x;
+		var r = LEVEL[0] - x - BLOCK[0] - 1;
+		map.push([l,r]);
+	}
+}
+
+function clearGaps() {
+	for (var i=BLOCK[1]; i<LEVEL[1]; i++) {
+		var n = parseInt(i/BLOCK[1]);		// get gap i
+		var prevX = gaps[n-1];
+		var curX = gaps[n];
+		
+		if (prevX>curX)
+			map[i][1] = LEVEL[0] - prevX - BLOCK[0] - 1;
+		else
+			map[i][0] = prevX;
+	}
+}
+
+function drawLevel() {
+	var lvl = document.createElement("div");
+	lvl.className = "level";
+	
+	for(var i=map.length-1; i>=0; i--) {
+		var div = document.createElement("div");
+		
+		var s1 = document.createElement("span");
+		var s2 = document.createElement("span");
+		
+		s1.style.width = map[i][0] * TILE_SIZE + "px";
+		s1.style.marginRight = -map[i][0] * TILE_SIZE + "px";
+		s2.style.width = map[i][1] * TILE_SIZE + "px";
+		
+		s1.innerHTML = map[i][0];
+		s2.innerHTML = map[i][1];
+		
+		div.appendChild(s1);
+		div.appendChild(s2);
+		lvl.appendChild(div);
+	}
+	document.body.appendChild(lvl);
+}
+
+
+function init() {
+	initMap();
+	placeGaps();
+	drawLevel();
+	clearGaps();
+	drawLevel();
+}
+
+document.addEventListener("DOMContentLoaded", init, false);
+</script>
+</head>
+<body>
+</body>
+</html>

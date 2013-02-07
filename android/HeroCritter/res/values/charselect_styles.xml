@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="charselect_bg">#ff002255</color>
+	<style name="HeroTheme.CharSelect">
+		<!-- <item name="android:windowBackground">@color/charselect_bg</item> -->
+	</style>
+	
+	
+	<!-- Title -->
+	<style name="HeroTheme.CharSelect.Title"></style>
+	
+	<color name="charselect_title_bg">#ff000055</color>
+	
+	<style name="HeroTheme.CharSelect.Title.Background">
+		<item name="android:background">@color/charselect_title_bg</item>
+	</style>
+	
+	<style name="HeroTheme.CharSelect.Title.Text">
+		<item name="android:textAppearance">@style/HeroTheme.TextAppearance.Title</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:paddingTop">@dimen/text_title_padding</item>
+		<item name="android:paddingBottom">@dimen/text_title_padding</item>
+	</style>
+	
+	<!-- Character -->
+	
+	<!-- List -->
+	
+	<!-- New -->
+    
+    <style name="HeroTheme.CharSelect.List"></style>
+    
+    <style name="HeroTheme.CharSelect.New"></style>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:hero="http://schemas.android.com/apk/res/com.swordandspade.hero"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#444">
+	
+	<com.swordandspade.widgets.RadioGrid
+		hero:rows="3"
+  		hero:cols="3"
+  		hero:labels_rows="@array/charselect_align_labels_rows"
+  		hero:labels_cols="@array/charselect_align_labels_cols"
+  		android:layout_width="match_parent"
+  		android:layout_height="wrap_content"/>
+</TableLayout>
+

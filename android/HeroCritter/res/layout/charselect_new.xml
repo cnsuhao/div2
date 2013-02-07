@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+        
+        <TextView
+        	android:id="@+id/title"
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_alignParentTop="true"
+        	android:layout_alignParentLeft="true"
+        	android:text="title"/>
+        
+        <Button
+        	android:layout_width="wrap_content"
+        	android:layout_height="100px"
+        	android:text="@string/btn_next"
+        	android:id="@+id/btn_next"
+        	android:layout_alignParentBottom="true"
+        	android:layout_alignParentRight="true"/>
+        
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@id/btn_next"
+            android:tabStripEnabled="false"
+            android:visibility="gone"/>
+            
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/title"
+            android:layout_above="@android:id/tabs"
+            android:padding="5dp" />
+            
+        
+    </RelativeLayout>
+</TabHost>

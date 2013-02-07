@@ -1,0 +1,11 @@
+#application.landscape {
+	width: 480px;
+	height: 320px;
+	background-color: #444;
+}
+
+#application.portrait {
+	height: 480px;
+	width: 320px;
+	background-color: #444;
+}

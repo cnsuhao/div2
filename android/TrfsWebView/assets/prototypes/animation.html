@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- GENERAL/META -->
+<title>Sprite CSS3 Animation Prototype</title>
+	
+<!-- STYLES -->
+<style>
+
+/* general css */
+#config td {
+	vertical-align: top;	
+}
+
+#app {
+	width: 400px;
+	height: 300px;
+	background-color: #777;
+}
+
+/* player style */
+#player {
+	position: relative;
+	width: 88px;
+	height: 88px;
+	left: 156px;
+	top: 116px;
+}
+
+#player .sprite {
+	width: 80px;
+	height: 80px;
+	border: 4px solid black;
+}
+
+#player::before {
+	text-align: center;
+	display:block;
+	position: relative;
+	width: 80px;
+	height: 20px;
+	background-color: white;
+	border: 0px;
+	top: -4px;
+	left: 2px;
+	font-weight: boldest;
+	line-height: 20px;
+	font-family: monospace;
+	border-radius: 8px;
+	border: 2px solid black;
+}
+
+/** Animations **/
+@-webkit-keyframes spinClockwise {
+	from { -webkit-transform: rotate(0deg); }
+	to   { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spinCounterClockwise {
+	from { -webkit-transform: rotate(0deg); }
+	to   { -webkit-transform: rotate(-360deg); }
+}
+
+@keyframes spinClockwise {
+	from { transform: rotate(0deg); }
+	to   { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+	from { transform: rotate(0deg); }
+	to   { transform: rotate(-360deg); }
+}
+/** link animations/css with selectors **/
+#player[facing=left]::before { content: "<--"; }
+#player[facing=right]::before { content: "-->"; }
+
+#player[state=idle] .sprite { border-top-left-radius: 20px; border-top-right-radius: 20px; background-color: yellow; }
+
+#player[state=run] .sprite { background-color: red; }
+#player[state=run][facing=left] .sprite  { border-top-left-radius: 20px; }
+#player[state=run][facing=right] .sprite { border-top-right-radius: 20px; }
+
+#player[state=jump] .sprite { 
+	background-color: #08f; 
+	border-radius: 20px; 
+	animation-duration: 1s; 
+	animation-iteration-count: infinite;
+	animation-timing-function: linear; 
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear; 
+}
+#player[state=jump][facing=left] .sprite { animation-name: spinCounterClockwise; -webkit-animation-name: spinCounterClockwise; }
+#player[state=jump][facing=right] .sprite { animation-name: spinClockwise; -webkit-animation-name: spinClockwise; }
+
+#player[state=wall] .sprite { background-color: #0f0;  }
+#player[state=wall][facing=left] .sprite  { border-top-left-radius: 20px; border-bottom-left-radius: 20px; }
+#player[state=wall][facing=right] .sprite { border-top-right-radius: 20px; border-bottom-right-radius: 20px; }
+
+</style>
+
+<!-- SCRIPTS -->
+<script>
+var ply;
+function update(node) {
+	ply.setAttribute(node.name, node.value);
+	ply.setAttribute("facing", ply.getAttribute("facing")); // hack to update css
+}
+
+function init() {
+	ply = document.getElementById("player");
+}
+document.addEventListener("DOMContentLoaded", init, false);
+</script>
+
+</head>
+<body>
+<h1>Sprite CSS3 Animation Prototype</h1>
+<p>
+Demonstrates using CSS3 attribute selectors to create sprite animations instead of manually
+animating with javascript.  Simply change the #player DOMElement's "state" and "facing" attributes to
+change the graphics based on the stylesheet.
+</p>
+
+
+<div id="app">
+	<div id="player" state="idle" facing="right">
+		<div class="sprite"></div>
+	</div>
+</div>
+<div id="config">
+	<h3>Pick a style!</h3>
+	<form name="config">
+	<table><tr>
+		<td><b>Animation:</b><ul>
+			<li><input name="state" type="radio" value="idle" onClick="update(this)" checked/> Idle</li>
+			<li><input name="state" type="radio" value="run" onClick="update(this)"/> Running</li>
+			<li><input name="state" type="radio" value="jump" onClick="update(this)"/> Jumping</li>
+			<li><input name="state" type="radio" value="wall" onClick="update(this)"/> Wall Slide</li>
+		</ul></td>
+		<td><b>Facing:</b><ul>
+			<li><input name="facing" type="radio" value="left" onClick="update(this)"/> Left</li>
+			<li><input name="facing" type="radio" value="right" onClick="update(this)" checked/> Right</li>
+		</ul></td>
+	</tr></table>
+	</form>
+</div>
+</body>
+</html>

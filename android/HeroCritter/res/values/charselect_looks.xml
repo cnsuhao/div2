@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="charselect_looks_title">Physical Appearance</string>
+
+	<string name="charselect_looks_age">Age:</string>
+    <string name="charselect_looks_weight">Weight:</string>
+    <string name="charselect_looks_height">Height:</string>
+</resources>

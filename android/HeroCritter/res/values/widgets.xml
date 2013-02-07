@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- RadioGrid -->
+	<declare-styleable name="RadioGrid">
+		<attr name="rows" format="integer"/>
+		<attr name="cols" format="integer"/>
+		<attr name="labels_rows" format="reference"/>
+		<attr name="labels_cols" format="reference"/>
+	</declare-styleable>
+</resources>

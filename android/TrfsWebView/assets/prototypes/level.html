@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Level Graphics/Tiling Prototype</title>
+
+<style>
+.level {
+	background-color: #8cf;
+	display: block;
+	width: 504px; 
+	margin: 10px;
+	float: left;
+}
+
+.level div {
+	height: 36px;
+	border-style: solid;
+	border-color: black;
+	border-width: 0px;
+}
+
+.level div span {
+	position: relative;
+	display: block;
+	float: right;
+	background-color: #271200;
+}
+
+.level div span[edges*=N] {	border-top: 5px solid #430; }
+.level div span[edges*=E] {	border-right: 5px solid #430; }
+.level div span[edges*=W] {	border-left: 5px solid #430; }
+.level div span[edges*=S] {	border-bottom: 5px solid #430; }
+
+.level div span:first-child {
+	float: left;
+	margin-right: -504px;
+}
+</style>
+</head>
+
+<body>
+<script>
+/*
+ 
++            +		+            +
++            +		+            +
+++           +		*+           +     
+++           +		*+           +
++++++++     ++		**+++++     +*
++++++       ++		**+++       +*
+++        ++++		*+        ++**
+++        ++++		*+        +***
+++++++   +++++		**++++   +****
+++++++    ++++		*****+    +***
++++++     ++++		****+     +***
+++++      ++++		**++      +***
+++        ++++		*+        +***
++        +++++		+        +****
++    +++++++++		+    +++++++**
++           ++		+           ++
+++           +		*+           +
+++++         +		**++         +
++++++++++++  +		****+++++++  +
++++++++++++  +		**********+  +
+*/
+
+map = [
+	"+            +",
+    "+            +",
+	"+            +",
+	"++           +",
+	"++           +",
+	"+++++++     ++",
+	"+++++       ++",
+	"++        ++++",
+	"++        ++++",
+	"++++++   +++++",
+	"++++++    ++++",
+	"+++++     ++++",
+	"++++      ++++",
+	"++        ++++",
+	"+        +++++",
+	"+    +++++++++",
+	"+           ++",
+	"++           +",
+	"++++         +",
+	"+++++++++++  +",
+	"+++++++++++  +",
+	"+++++++++++  +"
+];
+
+for (var i=0; i<map.length; i++) {
+	r = map[i].match(/\++/g);
+	map[i] = [r[0].length, r[1].length];
+}
+
+map = map.reverse();
+
+var TILE_SIZE = 36;
+
+// draw
+var lvl = document.createElement("div");
+lvl.className = "level";
+
+for(var i=1; i<map.length-1; i++) {
+	
+	var div = document.createElement("div");
+	
+	for(var j=0; j<2; j++) {
+		var span = document.createElement("span");
+		
+		var h = TILE_SIZE;
+		var w = map[i][j];
+		var m = Math.min(map[i-1][j], map[i+1][j]);
+		
+		if (w==m)
+			m -= 1;
+		
+		w -= m;
+		w *= TILE_SIZE;
+		
+		if (j==0)
+			div.style.borderLeftWidth = (m * TILE_SIZE) + "px";
+		else
+			div.style.borderRightWidth = (m * TILE_SIZE) + "px";
+		
+		var edges = [];
+		if (map[i+1][j] < map[i][j]) {
+			edges.push("N");
+			h -= 5;	
+		}
+		
+		if (map[i-1][j] < map[i][j]) {
+			edges.push("S");
+			h -= 5;	
+		}
+		
+		if (j==0) 
+			edges.push("E");
+		else
+			edges.push("W");
+		w -= 5;
+		
+		
+		span.setAttribute("edges", edges.join(" "));
+		span.style.width = w + "px";
+		span.style.height = h + "px";
+		div.appendChild(span);
+	}
+	lvl.insertBefore(div, lvl.firstChild);
+}
+document.body.appendChild(lvl);
+
+</script>
+</body>
+</html>

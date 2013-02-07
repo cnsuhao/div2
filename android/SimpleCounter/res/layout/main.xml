@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/RelativeLayout"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/bg">	
+	
+	<Chronometer
+		android:text="@+id/Timer"
+		android:id="@+id/Timer" 
+		android:layout_alignParentRight="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="@color/fg"></Chronometer>
+
+	<TextView
+		android:id="@+id/CounterText"
+		android:text=""
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="@color/fg"></TextView>
+
+	<TextView
+		android:id="@+id/HelpText"
+		android:text="@string/help_text"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		android:gravity="center_horizontal"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textColor="@color/fg"></TextView>
+</RelativeLayout>

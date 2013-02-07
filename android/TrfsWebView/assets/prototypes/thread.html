@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Workers Prototype</title>
+</head>
+<body>
+<h1>Workers Prototype</h1>
+<div id="fib" style="width: 200px; border: 2px solid black; padding: 10px;"></div>
+<script>
+
+var worker = new Worker("thread.js");
+
+worker.onmessage = function (event) {
+	var span = document.createElement("span");
+	span.textContent = event.data;
+	document.getElementById("fib").appendChild(span);
+	console.log("Got: "+event.data);
+};
+
+worker.onerror = function(error) {
+	console.log("Error: "+error.data);
+	throw error;
+};
+
+worker.postMessage("s");
+
+</script>
+</body>
+</html>

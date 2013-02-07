@@ -1,0 +1,55 @@
+#player {
+	width: 36px;
+	height: 36px;
+	display: block;
+	position: relative;
+	top: -36px;
+}
+
+#player .sprite {
+	width: 32px;
+	height: 32px;
+	border: 2px solid black;
+	display: block;
+	-webkit-transform-origin: 50% 50%;
+	position: relative;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear; 
+	-webkit-animation-duration: 0.8s;
+}
+
+/** ANIMATIONS **/
+@-webkit-keyframes spinClockwise {
+	from { -webkit-transform: rotate(0deg); }
+	to   { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spinCounterClockwise {
+	from { -webkit-transform: rotate(0deg); }
+	to   { -webkit-transform: rotate(-360deg); }
+}
+
+#player[state=idle] .sprite { border-top-left-radius: 10px; border-top-right-radius: 10px; background-color: white; }
+
+#player[state=run] .sprite { background-color: red; }
+#player[state=run][facing=left] .sprite  { border-top-left-radius: 10px; }
+#player[state=run][facing=right] .sprite { border-top-right-radius: 10px; }
+
+#player[state=jump] .sprite { 
+	background-color: #08f; 
+	border-radius: 10px;
+}
+#player[state=jump][facing=left] .sprite { -webkit-animation-name: spinCounterClockwise; }
+#player[state=jump][facing=right] .sprite { -webkit-animation-name: spinClockwise; }
+
+#player[state=dash] .sprite { 
+	background-color: #aFf; 
+	border-radius: 10px;
+	-webkit-animation-duration: 0.4s;
+}
+#player[state=dash][facing=left] .sprite { -webkit-animation-name: spinCounterClockwise; }
+#player[state=dash][facing=right] .sprite { -webkit-animation-name: spinClockwise; }
+
+#player[state=wall] .sprite { background-color: #0f0; }
+#player[state=wall][facing=left] .sprite  { border-top-left-radius: 10px; border-bottom-left-radius: 20px; }
+#player[state=wall][facing=right] .sprite { border-top-right-radius: 10px; border-bottom-right-radius: 20px; }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Basic -->
+	<string name="app_name">Simple Counter</string>
+
+	<!-- Keys -->
+	<string name="ringtone">ringtone</string>
+	<string name="checkbox">checkbox</string>
+	
+	<!-- Text -->
+	<string name="help_text">Tap to start/reset\nSwipe to pause/resume</string>
+</resources>

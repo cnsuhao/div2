@@ -42,7 +42,7 @@ To download, you can save the above links, or use `download.sh`.
 ![Act 2:  Entering Gmod (Gmod10)](https://github.com/alecgoebel/div2/raw/master/misc/waking/screens/act2--gmod_stargate.png "Act 2:  Entering Gmod (Gmod10)")
 ![Act 2:  Bathtub Car (Gmod10)](https://github.com/alecgoebel/div2/raw/master/misc/waking/screens/act2--gmod_bathtub_car.png "Act 2:  Bathtub Car (Gmod10)")
 ![Act 2:  Discussions with Ghosts (Unreal Tournament 2004)](https://github.com/alecgoebel/div2/raw/master/misc/waking/screens/act2--ut_ghosts.png "Act 2:  Discussions with Ghosts (Unreal Tournament 2004)")
-![Act 3:  Peaceful Garden (Second Life)](https://github.com/alecgoebel/div2/raw/master/misc/waking/screens/act3--secondlife_flower.png "Act 3:  Peaceful Garden (Second Life)"
+![Act 3:  Peaceful Garden (Second Life)](https://github.com/alecgoebel/div2/raw/master/misc/waking/screens/act3--secondlife_flower.png "Act 3:  Peaceful Garden (Second Life)")
 ![Act 3:  Crashing Servers (Second Life)](https://github.com/alecgoebel/div2/raw/master/misc/waking/screens/act3--secondlife_destruction.png "Act 3:  Crashing Servers (Second Life)")
 ![Act 3:  Suiting Up (Second Life)](https://github.com/alecgoebel/div2/raw/master/misc/waking/screens/act3--secondlife_suiting_up.png "Act 3:  Suiting Up (Second Life)")
 ![Act 4:  Watching the Map (Real Life)](https://github.com/alecgoebel/div2/raw/master/misc/waking/screens/act4--irl_map.png "Act 4:  Watching the Map (Real Life)")

@@ -47,3 +47,14 @@ might not do anything as it is.
 Still, this is a decent example of the kind of thing I make as a way to
 test something I just learned. This looks to be from when I was learning
 about layouts and preferences management in Android.
+
+
+## Termites
+
+While teaching myself about renderscripts (sort of a custom shader language for
+android) I decided to program an alife Termite simulation.  This is one of my
+goto examples for perpixel simulations when I'm learning a new system because
+it is a bit more than a toy and I'm intimately familiar with how it should
+look.  While this example runs, it does not seem to be running absolutely
+correctly though this may just be due to how random numbers are used in
+renderscripts.

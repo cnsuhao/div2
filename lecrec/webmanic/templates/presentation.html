@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}{{ pres.title }}{% endblock %}
+{% block head %}
+<link type="text/css" href="/static/js/jqueryUI/css/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
+<script>
+var duration = {{ pres.duration }};
+</script>
+<script src="/static/js/jqueryUI/js/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/jquery.ae.image.resize.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/jqueryUI/js/jquery.dimensions.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/jqueryUI/js/jquery-ui-1.8.2.custom.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/thumbs.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/presentation.js" type="text/javascript" charset="utf-8"></script>
+<script src="/static/js/track.js" charset="utf-8"></script>
+<style>
+#firefoxwarn {
+    position: fixed;
+    right:  0px;
+    top: 0px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: #ffc;
+    color: black;
+    width: 500px;
+    font-size: 0.65em;
+}
+
+#firefoxwarn a { color: red; }
+#firefoxwarn a:visited { color: maroon; }
+</style>
+{% endblock %}
+{% block bodyclass %}media{% endblock %}
+{% block pageHeader %}
+{% for bc in pres.breadcrumbs %}
+<a href="{{bc.1}}">{{bc.0}}</a>{% if not forloop.last %} &raquo; {% endif %}
+{% endfor %}
+
+{% endblock %}
+{% block content %}
+<!-- VIEWER -->
+<div id="viewer">
+
+<!-- VIDEO PLAYER -->
+	{% if pres.sources.presenter %}
+	<div id="liveMovieContainer" class="liveMovie">
+		<video id="liveVideo" ontimeupdate='javascript: sync();' onloadmetadata='javascript: buildKeyFrames();'>
+			<source src="{{pres.sources.presenter.get_absolute_url}}.mp4" type="video/mp4; codecs='avc1.42E01E, mp4a.40.2'">
+			<source src="{{pres.sources.presenter.get_absolute_url}}.ogv" type="video/ogg">
+			Your browser does not support the video tag, Or we don't have the right format
+		</video>
+	</div>
+	{% endif %}
+
+<!-- END VIDEO PLAYER -->
+<!-- LIVE IMAGES -->
+	{% for source in pres.sources.all %}
+		{% ifequal source.srctype "SlideshowSource" %}
+			<div id="{{ source.name }}Container" class="liveImage">
+			<img src="{{ source.slides.all.0.get_absolute_url }}" style="opacity: 0;" id="{{ source.name }}" alt="loading image"/>
+			</div>
+		{% endifequal %}
+	{% endfor %}
+
+<!-- END LIVE IMAGES -->
+
+<!-- CONTROL BAR  -->
+	<div id="controlBar">
+			<div id="sliderContainer" style="display:inline">
+				<div id="slider">
+					<div id="mainSlider"></div>
+				
+				</div>
+			</div>
+			<div class="ui-state-default ui-corner-all" title=".ui-icon-play" id="masterPlay" style="width: 16px;"><span class="ui-icon ui-icon-play" id="masterPlayButton"	></span></div>		
+			<div class="ui-state-default ui-corner-all" title=".ui-icon ui-icon-arrowthick-1-e" id="masterForward" style="width: 16px;"><span class="ui-icon ui-icon ui-icon-arrowthick-1-e" id="masterForwardButton"></span></div>
+			<div id="clock"><span id="currentTime">00:00</span> / {{ duration }}</div>
+		</div>
+	
+	</div>
+	<div id="viewerCloak" class=""> </div>
+<!-- END CONTROL BAR -->
+
+
+</div>
+<!-- END VIEWER -->
+
+<!-- SIDE BAR -->
+<div id="sidebar">
+
+{% for slide in pres.slides %}
+	<div class="timestamp {{ slide.source.name }}_thumb" offset="{{ slide.offset }}" source="{{ slide.source.name }}" image="{{ slide.get_absolute_url }}">
+	<img src="{{ slide.get_thumb_url }}" width="128px" class="thumbnail"/>
+    <img src="{{ slide.get_preview_url }}" width="300px" class="preview"/>
+	<br/>{{ slide.timestamp }}
+	</div>
+{% endfor %}
+
+
+</div>
+<!-- END SIDE BAR -->
+
+
+{% endblock %}

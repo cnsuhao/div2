@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+<h1>Current Term ({{term.name}}):</h1>
+<ul id="term">
+{% for course in term.courses.all %}
+<li><a href="{{ course.get_absolute_url }}">{{course.courseid}}: {{ course.name }}</a></li>
+{% endfor %}
+</ul>
+{% endblock %}

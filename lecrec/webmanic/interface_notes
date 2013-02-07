@@ -1,0 +1,15 @@
+Help documents
+ * generated from rest/markdown syntax + documentation
+ * pause interface when help is clicked, opened in new tab
+
+Interface:
+ * "leanback" design philosophy
+ * all functions should be easy to get to via a google tv interface
+ * create custom mappings for custom user agents?
+ * potential to redirect to phone the same way
+ * keyboard and mouse controls
+
+Faster loading:
+ * generate as little in the template as possible
+ * couchdb backend might wind up being better but probably not for the admin
+ * presentation layouts are defined nicely

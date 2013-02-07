@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ course.name }}{% endblock %}
+{% block pageHeader %}
+{% for bc in course.breadcrumbs %}
+<a href="{{bc.1}}">{{bc.0}}</a>{% if not forloop.last %} &raquo; {% endif %}
+{% endfor %}
+{% endblock %}
+{% block content %}
+<h1>{{course.courseid}}: {{ course.name }}</h1>
+<ul id="course">
+{% for pres in course.pres.all %}
+<li><a href="{{ pres.get_absolute_url }}">{{ pres.title }}</a></li>
+{% endfor %}
+</ul>
+<br/>
+<br/>
+<a href="../">..back</a>
+{% endblock %}

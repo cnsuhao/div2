@@ -1,0 +1,9 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+    <item android:drawable="@drawable/troll_run0" android:duration="100" />
+    <item android:drawable="@drawable/troll_run1" android:duration="100" />
+    <item android:drawable="@drawable/troll_run2" android:duration="100" />
+    <item android:drawable="@drawable/troll_run3" android:duration="100" />
+    <item android:drawable="@drawable/troll_run4" android:duration="100" />
+    <item android:drawable="@drawable/troll_run5" android:duration="100" />
+</animation-list>

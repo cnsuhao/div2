@@ -1,0 +1,6 @@
+This is all the code copied straight out of Cabana.  Folders correspond to
+"grouped nodes."  A lot of this code is unused and doesn't make much sense but
+is included here for completions sake.  JSS is an implementation of CSS in
+javascript.
+
+All code here was written by Alec Goebel except external libraries.

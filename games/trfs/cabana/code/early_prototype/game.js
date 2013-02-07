@@ -1,0 +1,9 @@
+/**
+ * game.js
+ *
+ * Description
+ */
+
+(function () {
+	
+})();

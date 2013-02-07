@@ -1,0 +1,4 @@
+#camera {
+	-webkit-transform: translate(0px,0px);
+	-webkit-transition: -webkit-transform 3s linear;	
+}

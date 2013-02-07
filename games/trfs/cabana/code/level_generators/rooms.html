@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<script>
+
+var K = {};
+generators = [];
+var TILE = 20;
+function drawRoom(room) {
+	var cvs = document.createElement("canvas");
+	
+	var w = room.width * TILE;
+	var h =  room.rows.length * TILE;
+	
+	cvs.width = w;
+	cvs.height = h;
+
+	var ctx = cvs.getContext('2d');
+	for (var x=0; x<w; x+=TILE*2) {
+		for(var y=0; y<h; y+=TILE*2) {
+			ctx.fillStyle="rgb(200,200,200)";
+			ctx.fillRect(x,y,TILE,TILE);
+			ctx.fillRect(x+TILE,y+TILE,TILE,TILE);
+			ctx.fillStyle="rgb(180,180,180)";
+			ctx.fillRect(x,y+TILE,TILE,TILE);
+			ctx.fillRect(x+TILE,y,TILE,TILE);
+		}
+	}
+
+	ctx.scale(1,-1);
+	ctx.translate(0,-h);
+	ctx.fillStyle = "black";
+	for (var i=0; i<room.rows.length; i++) {
+		var row = room.rows[i];
+		ctx.fillRect(0,i*TILE, row[0]*TILE, TILE);
+		
+		if (room.corrected)
+			ctx.fillRect( TILE*row[1],i*TILE, TILE*(room.width-row[1]), TILE);
+		else
+			ctx.fillRect( TILE*(room.width - row[1]),i*TILE, TILE*row[1], TILE);
+	}
+	return cvs;
+}
+
+function makeRoom(typ) {
+	var rm = generators[typ]();
+	var elem = drawRoom(rm);
+	document.body.appendChild(elem);
+}
+function label(s) {
+	var h = document.createElement("h3");
+	h.innerHTML = s;
+	document.body.appendChild(h);
+}
+
+function clear() {
+	var c = document.createElement("div");
+	c.className="clear";
+	document.body.appendChild(c);
+}
+
+queue = [];
+function addRooms(name, typ, count) {
+	queue.splice(0,0,[name,typ,count])
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+	for (var i=0; i<queue.length; i++) {
+		label(queue[i][0]);
+		for (var j=0; j<queue[i][2]; j++) {
+			makeRoom(queue[i][1]);
+		}
+		clear();
+	}
+});
+
+var _rmCount = 0;
+function register(name, func) {
+	var k = "RM_" + name.toUpperCase();
+	var i = ++_rmCount;
+	K[k] = i;
+	generators[i] = func;
+}
+
+</script>
+<style>
+body > canvas {
+	display: block;
+	position: relative;
+	border: 2px solid black;
+	margin: 4px;
+	float: left;
+}
+
+.clear { clear:both }
+
+
+
+</style>
+<script src="rooms.js"></script>
+<script>
+
+</script>
+</head>
+<body>
+</body>
+</html>

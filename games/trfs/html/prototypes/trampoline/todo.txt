@@ -1,0 +1,24 @@
+TODO:
+=================
+- integrate with bali
+- N trampoline's
+- N cat's
+- Degrading trampoline's
+   - single bounce/time
+- sprite framework
+- make more object oriented
+- Primary elements
+	+ trampoline 
+	+ camera
+	+ player
+	+ floor
+	+ collidables
+		- mines
+		- coins
+	+ HUD
+	+ Menus
+- refactor into smaller files
+- "loadjs" file for now
+- spawn rows as needed 
+	- delete them as needed as well
+- basic physics

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- GENERAL/META -->
+<title>Camera Prototype</title>
+	
+<!-- STYLES -->
+<style>
+
+.layer {
+	width: 980px;
+	height: 600px;
+	background-color: #08f;
+	position: absolute;
+}
+
+#app {
+	width: 480px;
+	height: 320px;
+	border: 2px solid black;
+	overflow: hidden;
+	z-index: 3;
+	position: absolute;
+	transform:  rotateX(180deg);
+	-webkit-transform:  rotateX(180deg);
+}
+
+#sprites {
+	top: 160px;
+	left: 240px;
+	position: absolute;
+}
+
+#map {
+	transform: scale(.25) translate(0px, 1100px) rotateX(180deg);
+	-webkit-transform: scale(.25) translate(0px, 1100px) rotateX(180deg);
+}
+
+#map .layer {
+	border: 10px solid black;
+}
+
+.block .sprite {
+	background-color: red;
+	position: absolute;
+	color: white;
+	height: 50px;
+	width: 100px;
+	border: 2px solid black;
+	border-top: 10px solid black;
+	transform: rotateX(180deg);
+	-webkit-transform: rotateX(180deg);
+	z-index: 1;
+}
+
+#avatar, #avatar2 {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	border: 2px solid black;
+	background-color: white;
+	z-index: 2;	
+}
+
+#outline {
+	width: 464px;
+	height: 304px;
+	left: -240px;
+	top: -160px;
+	border: 8px dashed black;
+	background-color: transparent;
+	transform: translate(490px, 300px);
+	-webkit-transform: translate(490px, 300px);
+	z-index: 2;
+	position: absolute;
+}
+
+.walls {
+	width: 940px;
+	height: 560px;
+	position: absolute;
+	border: 20px solid #840;
+	z-index: 1;
+}
+
+[hidden=true] { display: none }
+
+</style>
+
+<script>
+var speed = 5;
+var vel;
+var pos = {x:490, y:300};
+var cpos = {x:490, y:300};
+var coff = {}
+var dest;
+function tick() {
+	// grab a new dest if none exists
+	if (dest==undefined) {
+		dest = {
+			x: parseInt(Math.random()*900)+20,
+			y: parseInt(Math.random()*520)+20
+		}
+		
+		var dx = dest.x - pos.x;
+		var dy = dest.y - pos.y;
+		
+		if (dx!=0) {
+			var theta = Math.atan(Math.abs(dy)/Math.abs(dx));
+			vel = { x: Math.cos(theta)*speed, y: Math.sin(theta)*speed };
+			
+			if (dx<0) vel.x = -vel.x;
+			if (dy<0) vel.y = -vel.y;
+		}
+		else {
+			vel = { x:0, y: speed };
+		}
+	}
+	
+	// load current pos
+	var x = pos.x;
+	var y = pos.y;
+	
+	// prevent overshoot
+	if (Math.abs(dest.x-x) >= Math.abs(vel.x)) {
+		x += vel.x;
+	}
+	else {
+		x = dest.x;
+	}
+	
+	if (Math.abs(dest.y-y) >= Math.abs(vel.y)) {
+		y += vel.y;
+	}
+	else {
+		y = dest.y;
+	}
+	
+	// grab new dest if we hit it
+	if (x==dest.x && y == dest.y) {
+		dest = undefined;
+	}
+	
+	// update avatar position	
+	pos.x = x;
+	pos.y = y;
+	
+	// figure out camera based on player pos
+	var cx = cpos.x;
+	var cy = cpos.y;
+	
+	// check if the offset is too far from center
+	var offx = x-cx;
+	var offy = y-cy;
+	
+	if (Math.abs(offx) >= 180) {
+		var dx = Math.abs(offx)-180;
+		if(offx<0)
+			cx -= dx;
+		else
+			cx += dx; 		
+	}
+	
+	if (Math.abs(offy) >= 100) {
+		var dy = Math.abs(offy)-100;
+		if(offy<0)
+			cy -= dy;
+		else
+			cy += dy;
+	}
+	
+	// clamp the camera
+	if (cx<240) cx=240;
+	if (cx>740) cx=740;
+	
+	if (cy<160) cy=160;
+	if (cy>440) cy=440;
+	
+	// update camera
+	cpos.x = cx;
+	cpos.y = cy;
+	
+	// update camera
+	avatar.style.transform = "translate("+pos.x+"px, "+pos.y+"px)";
+	avatar2.style.transform = "translate("+pos.x+"px, "+pos.y+"px)";
+	outline.style.transform = "translate("+cpos.x+"px, "+cpos.y+"px)";
+	sprites.style.transform = "translate("+(-cpos.x)+"px, "+(-cpos.y)+"px)";
+	avatar.style.webkitTransform = "translate("+pos.x+"px, "+pos.y+"px)";
+	avatar2.style.webkitTransform = "translate("+pos.x+"px, "+pos.y+"px)";
+	outline.style.webkitTransform = "translate("+cpos.x+"px, "+cpos.y+"px)";
+	sprites.style.webkitTransform = "translate("+(-cpos.x)+"px, "+(-cpos.y)+"px)";
+}
+
+function toggle() {
+	if (loop == undefined) {
+		loop = setInterval(tick, parseInt(1000/60));
+	}
+	else {
+		clearInterval(loop);
+		loop = undefined;
+	}
+}
+
+var avatar;
+var avatar2;
+var outline;
+var sprites;
+var loop;
+function init() {
+	// find nodes
+	avatar = document.getElementById("avatar");
+	avatar2 = document.getElementById("avatar2");
+	outline = document.getElementById("outline");
+	sprites = document.getElementById("sprites");
+	
+	// unhide stuff
+	avatar.setAttribute("hidden","false");
+	avatar2.setAttribute("hidden","false");
+	outline.setAttribute("hidden","false");
+	
+	// start loop
+	toggle();
+}
+
+document.addEventListener("DOMContentLoaded", init, false);
+</script>
+</head>
+
+<body onclick="toggle()">
+<h1>Camera Prototype</h1>
+<p>Demonstrates how the camera will work based.  Camear trails player as it moves arounds.
+This also uses CSS3 to attempt to invert the world so that the coordinate of css lines
+up with the coords of the code.</p>
+
+<p><b>Note:</b>  This is the final prototype.  Though the camera is clamping incorrectly (following, not leading the player) the concepts are sound.
+From this a camera "framework" can be written to handle the rest.  From there the correct behavior can be decided.</p>
+
+<h4>Click anywhere to pause/resume</h4>
+<div id="app">
+	<div id="sprites" class="layer">
+		<div id="avatar" hidden=true></div>
+		<div class="walls"></div>
+		<div class="block" style="transform: translate(220px,70px);-webkit-transform: translate(220px,70px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(75px,480px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(630px,152px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(400px,300px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(20px,20px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(105px,244px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(775px,430px)"><div class="sprite"></div></div>
+	</div>
+</div>
+
+<div id="map">
+	<div id="sprites" class="layer">
+		<div id="outline" hidden=true></div>
+		<div id="avatar2" hidden=true></div>
+		<div class="walls"></div>
+		<div class="block" style="-webkit-transform: translate(220px,70px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(75px,480px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(630px,152px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(400px,300px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(20px,20px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(105px,244px)"><div class="sprite"></div></div>
+		<div class="block" style="-webkit-transform: translate(775px,430px)"><div class="sprite"></div></div>
+	</div>
+</div>
+
+</body>
+</html>

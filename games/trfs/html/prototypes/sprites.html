@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Sprites Test</title>
+
+<style>
+
+@keyframes walk {
+	0%   { background-position: -32px 0px; }
+	24.999%  { background-position: -32px 0px; }
+	25%  { background-position: 0px 0px; }
+	49.999%  { background-position: 0px 0px; }
+	50%  { background-position: -32px 0px; }
+	74.999%  { background-position: -32px 0px; }
+	75%  { background-position: -64px 0px; }
+	99.999%  { background-position: -64px 0px; }
+	100% { background-position: -32px 0px; }
+}
+
+@-webkit-keyframes walk {
+	0%   { background-position: -32px 0px; }
+	24.999%  { background-position: -32px 0px; }
+	25%  { background-position: 0px 0px; }
+	49.999%  { background-position: 0px 0px; }
+	50%  { background-position: -32px 0px; }
+	74.999%  { background-position: -32px 0px; }
+	75%  { background-position: -64px 0px; }
+	99.999%  { background-position: -64px 0px; }
+	100% { background-position: -32px 0px; }
+}
+
+#animal {
+	width: 32px;
+	height: 32px;
+	overflow: hidden;
+}
+
+#animal .sprite {
+	animation-duration: 1s; 
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(1,0,0,1);
+	animation-name: walk;
+	-webkit-animation-duration: 1s; 
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(1,0,0,1);
+	-webkit-animation-name: walk;
+}
+
+#animal .sprite { width: 384px; height: 256px; background-image: url(farm.png); position: relative;}
+
+#animal[species=dog] .sprite { top: 0px; left: 0px; }
+#animal[species=cow] .sprite { top: -128px; left: 0px; }
+
+</style>
+
+<script type="text/javascript">
+var animal;
+function update(node) {
+	
+}
+
+function init() {
+	animal = document.getElementById("animal");
+}
+document.addEventListener("DOMContentLoaded", init, false);
+</script>
+
+</head>
+<body>
+<h1>Sprites Test</h1>
+
+<div id="animal" species="cow"><div class="sprite"></div></div>
+</body>
+</html>

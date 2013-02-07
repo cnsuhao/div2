@@ -1,0 +1,5 @@
+<bitmap	name="rock"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:src="@drawable/rock"
+	android:tileMode="repeat"
+	android:dither="true"/>

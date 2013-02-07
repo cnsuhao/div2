@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Graphics Tests</title>
+	
+	<link rel="stylesheet" type="text/css" href="graphics.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/game.css"/>
+	
+	<script type="text/javascript" src="../js/constants.js"></script>
+	<script type="text/javascript" src="../js/util.js"></script>
+	<script type="text/javascript" src="graphics.js"></script>
+</head>
+<body id="graphicsTest">
+<h1>Graphics Tests</h1>
+<p>Used to test CSS3 stylesheets for game elements.</p>
+
+<table>
+	<!-- Player -->
+	<tr ><td class="header" colspan=2>
+		<h2>Player:</h2>
+		<p>Player graphics test.</p>
+	</td></tr>
+	<tr><th class="config"></th><th class="demo"></th></tr>
+	<tr id="playerTest">
+		<td class="config">
+			<form name="playerConfig"></form>
+		</td>
+		<td class="demo" id="playerDemo">
+			<span><div id="player"></div></span>
+		</td>
+	</td><tr>
+	
+	<!-- Platform -->
+	<tr><td class="header" colspan=2>
+		<h2>Platform:</h2>
+		<p>Platform: graphics test.</p>
+	</td></tr>
+	<tr><th class="config"></th><th class="demo"></th></tr>
+	<tr id="platformTest">
+		<td class="config">
+			<form name="platformConfig">
+				<label for="width">Width</label>: </label><input name="width"/> (max: <span id="pltWMax"></span>)<br/>
+				<label for="height">Height</label>: <input name="height"/> (max: <span id="pltHMax"></span>)
+			</form>
+		</td>
+		<td class="demo" id="platformDemo">
+			<div id="platform" class="platform"></div>
+		</td>
+	</td><tr>
+</table>
+
+</body>
+</html>

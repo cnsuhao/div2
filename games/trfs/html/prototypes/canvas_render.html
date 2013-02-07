@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Canvas Prototype</title>
+<style>
+canvas { position: absolute; }
+#dark { display: none;  }
+</style>
+
+<script>
+
+map = [[0,0], [0,0], [5,0], [5,0], [0,0], [0,0], [0,5], [0,5]];
+bg  = [[0,8], [0,8], [0,6], [0,6], [0,4], [0,4], [0,2], [0,2]]; 
+width = 10;
+
+</script>
+</head>
+<body>
+<canvas id="light" width="960" height="640"></canvas>
+<canvas id="dark" width="960" height="640"></canvas>
+<canvas id="mask"></canvas>
+
+<canvas id="root"></canvas>
+
+<script>
+var light = document.getElementById("light");
+var dark = document.getElementById("dark");
+
+var ctx = light.getContext("2d");
+
+ctx.scale(1,-1);
+ctx.translate(0,-640);
+
+ctx.fillStyle="rgb(150,75,0)";
+ctx.fillRect(0,0,80,800);
+ctx.fillRect(880,0,80,800);
+
+ctx.save();
+ctx.translate(80,0);
+for (var i=0; i<map.length; i++) {
+	var r = map[i];
+	ctx.fillRect(0,0,r[0]*80,80);
+	ctx.fillRect((width-r[1])*80, 0, r[1]*80, 80);
+	ctx.translate(0,80);
+}
+ctx.restore();
+
+// draw dark
+var ctx = dark.getContext("2d");
+
+ctx.scale(1,-1);
+ctx.translate(0,-640);
+
+ctx.fillStyle="rgb(40,20,0)";
+ctx.fillRect(0,0,80,800);
+ctx.fillRect(880,0,80,800);
+
+ctx.save();
+ctx.translate(80,0);
+for (var i=0; i<map.length; i++) {
+	var r = map[i];
+	ctx.fillRect(0,0,r[0]*80,80);
+	ctx.fillRect((width-r[1])*80, 0, r[1]*80, 80);
+	ctx.translate(0,80);
+}
+ctx.restore();
+</script>
+
+</body>
+</html>

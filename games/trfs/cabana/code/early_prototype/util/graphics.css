@@ -1,0 +1,95 @@
+/********
+ * Table
+ ********/
+table {
+	border-collapse: collapse;
+	width: 980px;	
+}
+
+table, td, th {
+	border: 2px solid black;
+	vertical-align: top; 	
+}
+
+table tr > td:first-child, table tr > th:first-child {
+	width: 300px;
+}
+
+table td h2, table td h3, table td h4 {
+	margin: 5px 0px;	
+}
+
+table ul {
+	margin-top: 0px;
+	list-style-type: none;
+}
+
+/*********
+ * Header
+ *********/
+td.header {
+	background-color: #222;
+	color: white;
+}
+
+/*********
+ * Config
+ *********/
+.config {
+	
+}
+
+/********
+ * Demo
+ ********/
+.demo {
+	background-color: #777;	
+}
+
+/*********
+ * Labels
+ *********/
+th.config, th.demo {	
+	font-weight: bold;
+	font-size: 20px;
+	top: 0px;
+	line-height: 20px;
+	text-align: left;
+	border-bottom: 0px;
+}
+
+td.config, td.demo { border-top: 0px; }
+
+th.config::before { content: "Config:"; }
+th.demo::before { content: "Demo:"; }
+
+td.demo { vertical-align: middle; text-align: center; }
+
+/*********
+ * Player
+ *********/
+ 
+ #playerDemo {
+ 	text-align: center;
+ }
+ 
+ #graphicsTest .demo span {
+ 	display: inline-block;
+ 	border: 1px dashed white;
+ 	vertical-align: middle;
+ 	-webkit-transform: scale(2.5);
+ }
+
+/***********
+ * Platform
+ ***********/
+#platformTest .config  {
+	padding-top: 36px;
+}
+
+#graphicsTest .demo #platform {
+ 	margin: 36px;
+ 	display: inline-block;
+ 	border: 1px dashed white;
+ }
+

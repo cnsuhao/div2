@@ -1,0 +1,177 @@
+<html>
+<head>
+<style>
+canvas { background-color: #ddd; width: 700px; heigth: 700px; }
+</style>
+
+<script src="quadtree.js"></script>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+
+FLAT = 0;
+SLANT = 1;
+HILL = 2;
+STEEP = 3;
+WALL = 4;
+CEIL = 5;
+colors = ["rgb(0,0,255)","rgb(0,255,255)","rgb(0,255,0)","rgb(255,0,0)","rgb(255,255,0)","rgb(255,0,255)"];
+
+Array.prototype.set = function() {
+	var arr = [];
+	for (var i=0; i<this.length; i++) {
+		if (arr.indexOf(this[i]) == -1)
+			arr.push(this[i]);
+	}
+	return arr;
+}
+
+Array.prototype.flatten = function() {
+	var result = []; 
+	
+	for (var i=0; i<this.length; i++) {
+		var v = this[i];
+		if (v && v.length !== undefined && typeof(v) != "string") {
+			result = result.concat(v.flatten());
+		} else {
+			result.push(v);
+		}
+	}
+	
+	return result;
+}
+
+function Segment(x0,y0,x1,y1) {
+	this.x0 = x0;
+	this.y0 = y0;
+	this.x1 = x1;
+	this.y1 = y1;
+	
+	// calculate line segment type
+	var dx = this.x1 - this.x0;
+	var dy = this.y1 - this.y0;
+	var M = Math.sqrt(dx*dx + dy*dy);
+	var theta = Math.acos(dx / M) * 180 / Math.PI;
+	
+	// store center
+	this.cx = dx/2 + x0;
+	this.cy = dy/2 + y0;
+	
+	if (theta == 0) 
+		this.type = FLAT;
+	else if (theta<30)
+		this.type = SLANT;
+	else if (theta<60)
+		this.type = HILL;
+	else if (theta<90) 
+		this.type = STEEP;
+	else if (theta == 90)
+		this.type = WALL;
+	else if (theta>90) 
+		this.type = CEIL;
+}
+
+function Room(data) {
+	this.w = data.size[0];
+	this.h = data.size[1];
+	this.room_pts = data.room;
+}
+
+Room.prototype.build = function() {
+	if(this.built) return;
+	
+	// adjust for unit size
+	this.w *= this.unit;
+	this.h *= this.unit;
+	
+	for (var i=0; i<this.room_pts.length; i+=2) {
+		this.room_pts[i] = this.unit * (this.room_pts[i] + this.x);
+		this.room_pts[i+1] = this.unit * (this.room_pts[i+1] + this.y);
+	}
+	
+	// create all segments
+	this.segments = [];
+	for (var i=0; i<this.room_pts.length; i+=2) {
+		var x0 = this.room_pts[i];
+		var y0 = this.room_pts[i+1];
+		var x1 = this.room_pts[(i+2)%this.room_pts.length];
+		var y1 = this.room_pts[(i+3)%this.room_pts.length];
+		
+		this.segments.push(new Segment(x0,y0,x1,y1));
+	}
+	
+	// insert points into quadtree
+	this.room = new QuadTree(this.x, this.y, this.w, this.h);
+	for (var i=0; i<this.room_pts.length; i+=2) {
+		this.room.getPoint(this.room_pts[i], this.room_pts[i+1]);
+	}
+	
+	this.built = true;
+}
+
+Room.prototype.draw = function(cvs) {
+	cvs.width = this.w;
+	cvs.height = this.h;
+	ctx = cvs.getContext('2d');
+	ctx.scale(1,-1);
+	ctx.translate(0,-this.h);
+	
+	// draw edge
+	ctx.fillRect(0,0,this.w,this.h);
+	ctx.fillStyle = "rgba(0,0,0,0)";
+	ctx.globalCompositeOperation = "source-in";
+	ctx.beginPath();
+	for (var i=0; i<this.room_pts.length; i+=2) {
+		ctx.lineTo(this.room_pts[i], this.room_pts[i+1]);
+	}
+	ctx.closePath();
+	ctx.fill();
+	
+	ctx.lineWidth = 5;
+	ctx.globalCompositeOperation = "source-over";
+	// go back over each edge and draw style of edge
+	for (var i=0; i<this.segments.length; i++) {
+		var seg = this.segments[i];
+		ctx.strokeStyle = colors[seg.type];
+		ctx.beginPath();
+		ctx.moveTo(seg.x0, seg.y0);
+		ctx.lineTo(seg.x1, seg.y1);
+		ctx.closePath();
+		ctx.stroke();
+	}
+	
+	this.room.draw(ctx);
+}
+
+var data = {
+	size: [10,10],
+	// two halves of the room
+	start: [0,0,2,2],
+	exit:  [0,3,5,5],
+	room: [
+	    1,2,
+		3,1,
+		4,1,
+		6.5,1,
+		7.5,2,
+		7,3,
+		9,3,
+		9,7,
+		6.5,8.5,
+		2,8.5,
+		2,7,
+		1,6
+	]
+}
+
+var room = new Room(data);
+room.x = 0;
+room.y = 0;
+room.unit = 70;
+room.build();
+room.draw(document.getElementById("canvas"));
+
+</script>
+</body>
+</html>

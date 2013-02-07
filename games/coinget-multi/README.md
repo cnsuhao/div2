@@ -27,6 +27,7 @@ The features I was attempting to demonstrate by the end of the project included:
  * pubsub signalling
  * AMP messaging -> signals -> game
  * Local and Networked PlayerControllers 
+ * Proper MVC structure
 
 ## Usage
  * Make sure to run `server.py` and then `client.py`.  You can use `--help` to

@@ -10,17 +10,16 @@ fi
 # variables
 DIR=`dirname $0`
 URLS=( `cat <<EOL
-http://stout.hampshire.edu/~acg10/waking/Waking_Act_1.mov
-http://stout.hampshire.edu/~acg10/waking/Waking_Act_2.mov
-http://stout.hampshire.edu/~acg10/waking/Waking_Act_3.mov
-http://stout.hampshire.edu/~acg10/waking/Waking_Act_4.mov
+http://stout.hampshire.edu/~acg10/waking/Waking_Act_1.avi
+http://stout.hampshire.edu/~acg10/waking/Waking_Act_2.avi
+http://stout.hampshire.edu/~acg10/waking/Waking_Act_3.avi
+http://stout.hampshire.edu/~acg10/waking/Waking_Act_4.avi
 EOL` )
 NURLS=${#URLS[@]}
 
 NAMES=( $(echo ${URLS[@]/*\//}) )
 
-MD5S=( "7e9793ff26ebcd6d95a9faaf8b9bfcff" "bb0bcd8d10f324da936845fe714346df" "b70290091a6282f1adedebcc8f6be714" "b71379ef2c6622f4fedad81aba382f6a" )
-
+MD5S=( "903baeaa3571dc9e9606afd7b6ad8f7c" "bbc77ccd544afd76605f95e4f67cebb0" "9cd4cd190e0988805e4d5cdfd8316b02" "351e0cc3da8ddc833015df17f0b30581" )
 
 # I hate doing this long hand but the loops weren't working
 declare -a FILESIZES

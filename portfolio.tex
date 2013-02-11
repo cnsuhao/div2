@@ -1,52 +1,31 @@
-\documentclass[letterpaper,twoside]{report}
-
-% TODO: format things "cleanly" with pagebreaks
+\documentclass[letterpaper,twoside]{portfolio}
 
 %%% IMPORTS
-%\usepackage{pdfpages}
 \usepackage{wrapfig}
 \usepackage{parskip}
 \usepackage{titlesec}
-%\usepackage[Bjornstrup]{fncychap}
-\usepackage{fullpage}
 
-\usepackage{minted}
-%\usemintedstyle{bw}
 
-%%% STYLE
-%\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
-%\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}{
 
-%%% INFO
+
 \title{Division II Portfolio}
 \author{Alec Goebel}
 \date{\today}
 
-
-%%% DOCUMENT
 \begin{document}
 \maketitle
 \tableofcontents
 
-% main contents
+\part{Division II}
 \include{tex/retro}
 \include{tex/mcp}
 \include{tex/cel}
  
 \part{Coursework}
-% TODO: blocks aren't showing up so great, figure out a new way
 
 \chapter{Summary}
 
 \chapter{Hampshire}
-% HAMP
-%     Pygame course
-%     Lecture Recording
-%     TA Web
-%     Gamification
-%     Creative Programming
-%     ...
-
 \include{tex/courses/hampshire/pygame-course}
 \include{tex/courses/hampshire/lecture-recording}
 \include{tex/courses/hampshire/web-taing}
@@ -57,9 +36,9 @@
 \include{tex/courses/hampshire/genetic-programming}
 \include{tex/courses/hampshire/opengl}
 \include{tex/courses/hampshire/video-game-design-2}
-\include{tex/courses/hampshire/improvisors-workshop}
+\include{tex/courses/hampshire/improv}
 
-\chapter{Hampshire - No Eval}
+\dividerpart{No Evaluations}
 \include{tex/courses/hampshire/mobile-computing}
 \include{tex/courses/hampshire/betahub}
 \include{tex/courses/hampshire/databases}
@@ -91,9 +70,32 @@ TODO
 
 \part{Sample Works}
 
-\include{tex/works/pygame}
+\chapter{Programming Languages}
+\input{tex/works/lang/about}
+\include{tex/works/lang/python}
+\include{tex/works/lang/clojure}
+\include{tex/works/lang/js}
+\include{tex/works/lang/java}
+\include{tex/works/lang/cpp}
+
+\chapter{Pygame Course}
+\include{tex/works/course}
+
+\chapter{Game Development}
+
+\chapter{Web Development}
+\input{tex/works/web/about}
+\include{tex/works/web/frontend}
+\include{tex/works/web/backend}
+
+\chapter{Other Interfaces}
+\include{tex/works/ui/hci}
+\include{tex/works/ui/android}
+\include{tex/works/ui/libs}
 
 \chapter{Miscellaneous}
-\input{tex/works/waking}
+\include{tex/works/other/waking}
+\include{tex/works/other/gamification}
 
+% \appendix
 \end{document}

@@ -13,7 +13,7 @@ So, now flashing can work like this.
     ...
     flash("Hello")
     flash.error("HELP, EVERYTHING IS WRONG")
-    flash.info("Type your name")
+    flash.info("User record updated")
 
 Essentially, the code passes the name of any attribute it doesn't know about as the 
 type for the flash.
@@ -25,10 +25,13 @@ Usually, the code rendering this would simply do:
 
 Though that is entirely up to the programmer once the messages are popped.
 """
+
+
+from functools import partial
+
 class AdvFlash(object):    
     class _Message(object):
-        def __init__(self,v):
-            self.text = v
+        def __init__(self,v): self.text = v
         def __repr__(self): return self.text
         def __str__(self): return self.text
         def __unicode(self): return unicode(self.text)
@@ -42,18 +45,20 @@ class AdvFlash(object):
         from pylons import session
         message = self._Message(message)
         message.type = typ or self.type
+
         info = self.defaults.copy()
         info.update(kw)
+
         for k,v in info.items():
             setattr(message,k,v)
+
         session.setdefault(self.key, []).append(message)
         session.save()
     
     def __getattr__(self,k):
-        def call(v,**kw):
-            self(v,k,**kw)
-        return call
-        
+        "for any given attribute, simply return a partial with the name as the type"
+        return partial(self, typ=k)
+
     def pop_messages(self):
         from pylons import session
         messages = session.pop( self.key, [] )

@@ -73,21 +73,7 @@ Array.prototype.remove = function(from, to) {
   this.length = from < 0 ? this.length + from : from;
   return this.push.apply(this, rest);
 };
-/*
-Array.prototype.weave = function(arr) {
-	var weaved = new Array();
-	
-	var i=0;
-	while(i<this.length || i<arr.length) {
-		if(i<this.length)
-			weaved.push(this[i]);
-		if(i<arr.length)
-			weaved.push(arr[i]);
-		i++;
-	}
-	return weaved;
-}
-*/
+
 Function.prototype.signature = function signature() {
 	var matches = this.toString().match(/^function (.*?)(\x28.*?\x29).*/);
 	var name = matches[1];

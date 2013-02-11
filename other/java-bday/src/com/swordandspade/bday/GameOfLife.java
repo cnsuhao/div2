@@ -36,24 +36,6 @@ public class GameOfLife extends JPanel implements Runnable, MouseListener, Mouse
 	private BufferedImage buff;
 	
 	private int drawMode=-1;
-	/*
-	 * minus mouse down...
-	 * 
-	 * images:
-	 * 		message
-	 * 		messageUnlocked
-	 * 		green
-	 * 		background (green+fades)
-	 * 
-	 * 		mask
-	 * 
-	 * for update:
-	 * 		pull in old array
-	 * 		run against life pattern
-	 * 		generate mask
-	 * 
-	 * 
-	 */
 	
 	
 	public void init() {

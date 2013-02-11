@@ -52,13 +52,14 @@
 <script>
 var terminal = {
 	lineNumber:0,
-	node: $("#terminal")[0],
+	node: document.getElementById("terminal"),
 	log: function log(msg) {
 		var scroll = this.node.parentNode.scrollTop;
 		var wrapHeight = $(this.node.parentNode).height();
 		var height = $(this.node).outerHeight();
 		var next = document.createElement("div");
 		
+        // append another line
 		next.innerHTML = "<span class='line'>"+this.lineNumber+":</span>"+
 						 "<span class='msg'>"+msg+"</span>";
 		$(this.node).append(next);

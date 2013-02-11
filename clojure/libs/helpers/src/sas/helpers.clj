@@ -21,11 +21,8 @@
      
      (area {:width 3, height: 5})"
   [bindings & body]
-  (let [ obj bindings ]
-     (if (nil? obj)
-      `(do ~@body)   
-      `(let [ ~@(mapcat (fn [k] [(. k sym) (k obj)]) (keys obj)) ]
-       ~@body))))
+  `(let [bnd# ~bindings
+         vars# (mapcat (fn [k#] [(symbol (name k#)) (get bnd# k#)]) (keys bnd#)) 
+         vars# (vec vars#) ]
+      (eval (list 'let vars# '~@body))))
 
-(def rect {:w 3 :h 5})
-(let-map rect (* w h))

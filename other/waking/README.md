@@ -13,18 +13,6 @@ final kill of the match. When the creators decide to test the limits
 of Vatar's capabilities, Vatar must come to grips with the newfound
 abilities and unfamiliar emotional bonds made.
 
-
-## Credits
- * Elisabeth Beinke
- * Aaron Breton
- * DC Corfman
- * Ed Dubois
- * Alec Goebel
- * Dan Tennant
- * Alex Schwartz
- * Ben Wood
-
-
 ## Videos
 You can stream the videos bellow.
  * [Part 1](http://stout.hampshire.edu/~acg10/waking/Waking_Act_1.mov)

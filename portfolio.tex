@@ -1,0 +1,103 @@
+\documentclass[letterpaper,twoside]{report}
+
+% TODO: timeline?!?!
+% TODO: format things "cleanly" with pagebreaks
+
+%%% IMPORTS
+%\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{parskip}
+\usepackage{titlesec}
+%\usepackage[Bjornstrup]{fncychap}
+\usepackage{layout}
+\usepackage{fullpage}
+
+\usepackage{minted}
+\usemintedstyle{bw}
+
+%%% STYLE
+%\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+%\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}{
+
+%%% INFO
+\title{Division II Portfolio}
+\author{Alec Goebel}
+\date{\today}
+
+
+%%% DOCUMENT
+\begin{document}
+\maketitle
+\tableofcontents
+
+% main contents
+\include{tex/retro}
+\include{tex/mcp}
+\include{tex/cel}
+ 
+\part{Coursework}
+% TODO: blocks aren't showing up so great, figure out a new way
+
+\chapter{Summary}
+
+\chapter{Hampshire}
+% HAMP
+%     Pygame course
+%     Lecture Recording
+%     TA Web
+%     Gamification
+%     Creative Programming
+%     ...
+
+\include{tex/courses/hampshire/pygame-course}
+\include{tex/courses/hampshire/lecture-recording}
+\include{tex/courses/hampshire/web-taing}
+\include{tex/courses/hampshire/gamifying-coursework}
+\include{tex/courses/hampshire/creative-programming}
+\include{tex/evals/creative-ta}
+\include{tex/evals/creative-student}
+\include{tex/courses/hampshire/genetic-programming}
+\include{tex/courses/hampshire/opengl}
+\include{tex/courses/hampshire/video-game-design-2}
+\include{tex/courses/hampshire/improvisors-workshop}
+
+\chapter{Hampshire - No Eval}
+\include{tex/courses/hampshire/mobile-computing}
+\include{tex/courses/hampshire/betahub}
+\include{tex/courses/hampshire/databases}
+
+
+\chapter{WPI}
+\input{tex/courses/wpi/about}
+
+% courses
+\include{tex/courses/wpi/tech-game-dev}
+\include{tex/courses/wpi/machinima}
+\include{tex/courses/wpi/human-computer-interaction}
+\include{tex/courses/wpi/storytelling}
+\include{tex/courses/wpi/intro-accel}
+\include{tex/courses/wpi/object-oriented}
+\include{tex/courses/wpi/systems-programming}
+\include{tex/courses/wpi/artificial-intelligence}
+
+%\include{courses/wpi/crit-studies-imgd}
+%\include{courses/wpi/social-issues-imgd}
+
+\chapter{Other}
+hi
+% Other
+%     High school
+%     WPI Help Desk
+%     Cablevision
+%     game-development-club
+
+\part{Sample Works}
+
+\include{tex/works/pygame}
+
+\chapter{Miscellaneous}
+\input{tex/works/waking}
+\clearpage
+\layout{}
+
+\end{document}

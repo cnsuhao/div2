@@ -6,4 +6,4 @@ removed a lot of the boiler plate code and kept the important bits where possibl
  * **cms-models** attempts at creating a cms with a form of version control via django models
  * **custom-template-tags** a few custom template tags to add more control flow to django templates (i.e. switch statements)
  * **sticky** a simple django app to easily add global sticky notes to a webpage so users can leave notes for themselves/others
- * **wiki** a wiki I whipped up as a tech demo for a client.  It allowed custom personalized theming and sharing.
+ * **wiki** a wiki I whipped up as a tech demo for a client.  It allowed custom themes to be uploaded and shared.

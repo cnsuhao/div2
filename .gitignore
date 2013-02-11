@@ -11,3 +11,5 @@
 boko
 .classpath
 .project
+.lein_failures
+target/

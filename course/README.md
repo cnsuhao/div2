@@ -18,18 +18,18 @@ teaching students about these higher level game mechanics.
 
 
 ## internal
-This folder contains a trimmed down version of what was cluttlering
-the "teaching" repo. This is where Paul, the other TAs, and myself
-would store any work in progress code or notes to review in our weekly
-meetings.
+This folder contains an abridged version of what was cluttlering the "teaching"
+repo of the course. This is where Paul, the other TAs, and myself would store
+any work in progress code or notes to review in our weekly meetings.
 
 
 ## homeworks
-These folders are what the students would recieve and complete for the
-homework assignments.  Towards the middle, I attempted to use TDD to 
-help them debug their work (similar to ruby koans). While the idea 
-wasn't bad, my inexperience made usage a bit obtuse for a long while
-and probably hurt more than it helped for a CS1 course.
+These folders are what the students forked to complete for the homework
+assignments.  Towards the middle of the course, I attempted to use TDD to help
+them debug their work (similar to ruby koans). This meant creating test cases
+for most of the homeworks after we taught functions.  While the idea wasn't
+bad, my inexperience made usage a bit obtuse for a long while and probably hurt
+more than it helped for a CS1 course.
 
 
 ## turnin.sh

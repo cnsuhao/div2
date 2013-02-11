@@ -1,4 +1,4 @@
-(ns sas.bitops.enum)
+(ns sandbox.enum)
 
 (defn- parse-enum-arg [v props]
   "Figures out where to put a given enum argument"

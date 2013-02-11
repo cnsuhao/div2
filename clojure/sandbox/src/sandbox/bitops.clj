@@ -1,5 +1,5 @@
-(ns sas.bitops
-  (:use [sas.bitops.enum :only (defenum)]))
+(ns sandbox.bitops
+  (:use [sandbox.enum :only (defenum)]))
 
 (defn bitmap
   "Creates a bitmap"

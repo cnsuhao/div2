@@ -1,5 +1,5 @@
-(ns sas.test.helpers
-  (:use [sas.helpers] :reload)
+(ns sandbox.test.letmap
+  (:use [sandbox.letmap] :reload)
   (:use [clojure.test]))
 
 (deftest let-map-test 

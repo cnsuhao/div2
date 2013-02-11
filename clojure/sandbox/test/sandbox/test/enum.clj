@@ -1,12 +1,12 @@
-(ns sas.bitops.test.enum
-  (:use [sas.bitops.enum] :reload)
+(ns sandbox.test.enum
+  (:use [sandbox.enum] :reload)
   (:use [clojure.test])
   (:use [clojure.contrib.with-ns]))
 
 ;; test parsing of enum arguments
 (deftest bitops.enum.parsing
-  (let [parse-enum-arg (with-ns 'sas.bitops.enum parse-enum-arg)
-        parse-enum-args (with-ns 'sas.bitops.enum parse-enum-args)]
+  (let [parse-enum-arg (with-ns 'sandbox.enum parse-enum-arg)
+        parse-enum-args (with-ns 'sandbox.enum parse-enum-args)]
     ; single argument
     (is (= (parse-enum-arg nil {}) {}) "Empty type")
     (is (= (parse-enum-arg Integer {}) {}) "Unknown type")
@@ -29,7 +29,7 @@
 
 ;; test of grouping by pairs
 (deftest bitops.enum.pairs
-  (let [pairs(with-ns 'sas.bitops.enum pairs)]
+  (let [pairs(with-ns 'sandbox.enum pairs)]
     (is (= (pairs []) []) "Empty")
     (is (= (pairs '[A]) '[A]) "Single")
     (is (= (pairs '[A B]) '[[A B]]) "Double")
@@ -37,7 +37,7 @@
 
 ;; testing building all the symbols into a vector
 (deftest bitops.enum.build-attrs
-  (let [build-attrs (with-ns 'sas.bitops.enum build-attrs)]
+  (let [build-attrs (with-ns 'sandbox.enum build-attrs)]
     (is (= (:attr (build-attrs {:type 0, :attr '(A)})) '[[A 0]]) "default (0-index)")
     (is (= (:attr (build-attrs {:type 0, :attr '(A 5)})) '[[A 5]]) "overriding index")
     (is (= (:attr (build-attrs {:type 1, :attr '(A B C)})) '[[A 1][B 2][C 3]]) "1-index")
@@ -46,7 +46,7 @@
 
 (deftest bitops.enum.defenum
 ;  (with-temp-ns
-;    (use 'sas.bitops.enum)
+;    (use 'sandbox.enum)
 ;    (use 'clojure.test)
     
     (defenum [A B])

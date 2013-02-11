@@ -1,5 +1,5 @@
-(ns sas.test.bitops
-  (:use [sas.bitops] :reload)
+(ns sandbox.test.bitops
+  (:use [sandbox.bitops] :reload)
   (:use [clojure.test]))
 
 ;; test to make sure bitmaps work

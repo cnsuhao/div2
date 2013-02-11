@@ -78,8 +78,7 @@
 ;; actual test making sure the string output is what is expected
 (deftest test-weapons
   (let [ allweapons {
-				  ::weapon      (format "<%s> [unknown]  no description" ::weapon)
-				  ::sword       (format "<%s> [%s]  is pointy, has edge" ::sword ::sword)
+				  ::weapon      (format "<%s> [unknown]  no description" ::weapon) ::sword       (format "<%s> [%s]  is pointy, has edge" ::sword ::sword)
 				  ::short-sword (format "<%s> [%s]  1 handed, is pointy, has edge" ::short-sword ::sword)
 				  ::broad-sword (format "<%s> [%s]  2 handed, is pointy, has edge" ::broad-sword ::sword)
 				  ::axe         (format "<%s> [%s]  has handle, has edge" ::axe ::axe)

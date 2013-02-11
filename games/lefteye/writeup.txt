@@ -1,0 +1,36 @@
+Engine Changes
+==============
+ * Overloaded Vector3D and Point3D to = float which sets every value to the same float
+ * Overloaded Vector3D and Point3D to == float which checks every value as the same float
+     * Only ever used to set a Vector to NULL
+ * Added SetFinalPosition in CharacterControl
+     * This allowed for Ropes, hanging, and movers
+
+Alec's Contributions
+====================
+I was primarily in charge of player and camera movements. I made
+all camera code, most registrars (used to register things instead
+of Game.cpp), player, game/gameworld, pivots, ropes, input, grips,
+constants, as well as the outline for how to add Methods(triggers) and
+commands
+
+My primary function was to make level design as easy on the artists as
+possible so there are a lot of added triggers to make placing pivots,
+ropes, camerashifts, etc much easier, as well as changing the player
+movement.
+
+The camera is a customized Chase cam with a lot of added features. All
+variables can be changed through either a trigger or a console command.
+
+The player movement is made almost entirely from scratch and relies
+heavliy on detecting States from what movement it is in. Move code sets
+up animation and where to move while Travel actually updates it.
+
+
+Dennis's Contributions
+======================
+For The Monkey's Left Eye I worked on a lot of the smaller parts of the
+game. I set up the loading of new worlds, the interface for the levels
+and collecting of coins and monkey pieces. I also set up the main menu
+that lets you start a new game. I also got the movement set up for the
+various types of moving objects in the game.

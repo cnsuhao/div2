@@ -9,7 +9,7 @@ I cannot be sure what is and what isn't my code.
  * **android** Example Android projects, mostly broken
  * **clojure** Clojure code
  * **course** All the course code the students had access to as
-   well as a selection of the internal repo from the pygame course.
+   well as a selection of the internal repo from the Pygame course.
  * **games** All projects involving game development.
  * **lecrec** Lecture Recording code
  * **other** Everything else

@@ -1,7 +1,7 @@
 Level generator algorithms. These do line up correctly with how things
 work in cabana. I (Alec) did not take the time to go through them and
 fix variable names and how random was being generated because I did not
-have time to test/guarentee they would break nothing.
+have time to test/guarantee they would break nothing.
 
 However, all the level types were being generated correctly in the form
 which the Cabana app required and other than variable renaming it should

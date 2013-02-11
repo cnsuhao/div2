@@ -1,1 +1,3 @@
-These are the core libraries.  They are more or less self contained as well as random helper functions.  PRNG is an implementation of a pseudo random number generator.  Sylvester is loading the sylvester vector library into cabana.
+These are the core libraries.  They are more or less self contained as well as
+random helper functions.  PRNG is an implementation of a pseudo random number
+generator.  Sylvester is loading the sylvester vector library into cabana.

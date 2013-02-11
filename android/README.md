@@ -1,6 +1,10 @@
 # Android Projects
 
-Over my time at Hampshire, I have created any number of android projects.  As I looked through my harddrive, I found some consistency: broken and poor documentation.  I've included the ones that "look the best" from a code standpoint, but it's hard to get at sense if they work based on purusing the source folders.
+Over my time at Hampshire, I have created any number of android projects.  As I
+looked through my harddrive, I found some consistency: broken and poor
+documentation.  I've included the ones that "look the best" from a code
+standpoint, but it's hard to get at sense if they work based on perusing the
+source folders.
 
 Feel free to browse the code, here is my recollection of what each is:
 
@@ -10,7 +14,7 @@ Feel free to browse the code, here is my recollection of what each is:
 An attempt to create radio buttons in a MxN grid instead of just in
 a row or col. The purpose was to use in a D&D alignment selection, but
 the case seemed general enough to abstract I attempted to make sure
-the widget was fully themeable via android's XML styling. As it is, I found
+the widget was customizable via android's XML styling. As it is, I found
 the code almost completely commented out so it probably was abandoned
 halfway through debugging or migrated to a different project.
 

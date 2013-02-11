@@ -1,6 +1,6 @@
 # Super Coin Get
 
-This game emerged from a basic inclass example. As students wondered
+This game emerged from a basic in-class example. As students wondered
 how to add tilesheets to their game, I would make example code. Then,
 if needed, I demonstrated how to integrate the example with this "coin
 get". As the term went on, I kept adding more and more features as
@@ -9,7 +9,7 @@ had learned in class. The end result was **Super Coin Get**.
 
 ## Gameplay
 Your goal is to get the coins. That's it. Though every time you collect
-one coin, two spawn. Careful though, they dissappear after a while.
+one coin, two spawn. Careful though, they disappear after a while.
 
 ## Features
 The features I was attempting to demonstrate by the end of the project included:

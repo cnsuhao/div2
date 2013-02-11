@@ -1,6 +1,6 @@
 # Javascript/jQuery UI Demos
 
-After leaving WPI I tried to be a freelance web developer.  The projects I worked on in my spare time were often attempting to creat specific UI features using jquery and javascript.  Here are a few demos:
+After leaving WPI I tried to be a freelance web developer.  The projects I worked on in my spare time were often attempting to create specific UI features using jquery and javascript.  Here are a few demos:
 
  * **Autoscroll**: Replicated scrolling behavior of terminals (ie autoscroll when at the bottom)
  * **Better Back to Top**: allows the user to jump back to where they were before going to the top

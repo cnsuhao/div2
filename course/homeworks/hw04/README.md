@@ -16,7 +16,7 @@ You can safely ignore everything in `hwtools.py`, it just contains some helper f
 
 ADVANCED:
 -----------------------------
-Make sure you complete each `[ADVANCED]` question in the homework.  In addtion, make the following two programs:
+Make sure you complete each `[ADVANCED]` question in the homework.  In addition, make the following two programs:
 
 1. **`cake.py`**:  Implement a program version of [cake or death](http://youtu.be/BNjcuZ-LiSY).  Here are the rules:
     * Keep asking "cake or death?" until death is selected

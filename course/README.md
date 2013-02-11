@@ -18,7 +18,7 @@ teaching students about these higher level game mechanics.
 
 
 ## internal
-This folder contains an abridged version of what was cluttlering the "teaching"
+This folder contains an abridged version of what was cluttering the "teaching"
 repo of the course. This is where Paul, the other TAs, and myself would store
 any work in progress code or notes to review in our weekly meetings.
 

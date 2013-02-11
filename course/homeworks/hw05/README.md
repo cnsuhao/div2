@@ -31,7 +31,7 @@ Player 1 wins!!!
 ```
 
 ## rings.py
-Draw the olympic rings. See the example image bellow.
+Draw the Olympic rings. See the example image bellow.
 
 
 ----
@@ -64,7 +64,7 @@ Player 1 wins!!!
 ```
 
 ## rings.py
-In addition to just drawing the olympic rings, make sure they overlap properly.  See the example image bellow.
+In addition to just drawing the Olympic rings, make sure they overlap properly.  See the example image bellow.
 
 
 ## tictactoe.py

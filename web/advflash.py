@@ -30,7 +30,7 @@ Though that is entirely up to the programmer once the messages are popped.
 from functools import partial
 
 class AdvFlash(object):    
-    class _Message(object):
+    class Message(object):
         def __init__(self,v): self.text = v
         def __repr__(self): return self.text
         def __str__(self): return self.text
@@ -43,7 +43,7 @@ class AdvFlash(object):
         
     def __call__(self, message, typ=None, **kw):
         from pylons import session
-        message = self._Message(message)
+        message = AdvFlash.Message(message)
         message.type = typ or self.type
 
         info = self.defaults.copy()

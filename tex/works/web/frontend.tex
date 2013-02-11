@@ -1,0 +1,50 @@
+\section{Frontend}
+% TODO: desc
+
+\subsection*{Tweaks}
+% TODO: desc
+
+% back2top
+\lstinputlisting[language=Javascript,%
+                 label=lst:jsbacktoloc,%
+                 firstline=26,%
+                 caption={[Back to Location] Prototype to make a resumable "back to top" link. When the user clicks a "\#top" link, the browser remembers their location.  Then, when they click a return button, they jump to where they last were. \\
+                          \emph{web/jsgui/backtoloc/backtoloc.js}}]
+{web/jsgui/backtoloc/backtoloc.js}
+
+% autoscroll
+\lstinputlisting[language=Javascript,%
+                 label=lst:jsautoscroll,%
+                 linerange={53-104},%
+                 firstnumber=53,%
+                 caption={[Autoscroll] Prototype to make a tag automatically scroll if the user was already on the bottom.  Similar to how most terminals behave.\\
+                          \emph{web/jsgui/autoscroll.html}}]%
+{web/jsgui/autoscroll.html}
+
+\newpage
+\subsection*{UI Widgets}
+% TODO: desc
+\lstinputlisting[language=Javascript,%
+                 firstline=2,
+                 label=lst:jshelp,%
+                 caption={[Help Overlays] A prototype to create clickable overlays which give instructions when selected.\\
+                          \emph{web/jsgui/help\_overlays/help\_overlays.js}}]%
+{web/jsgui/help_overlays/help_overlays.js}
+
+
+\lstinputlisting[language=Javascript,%
+                 label=lst:jskeymap,%
+                 linerange={151-151,155-190,193-193},%
+                 firstnumber=151,%
+                 caption={[Keymap] A prototype to recreate Ableton Live's Keymapping. \\
+                          \emph{web/jsgui/keymap/keymap.js}}]%
+{web/jsgui/keymap/keymap.js}
+
+% default checkboxes
+\lstinputlisting[language=Javascript,%
+                 label=lst:jscheckbox,%
+                 linerange={3-52},
+                 firstnumber=1,%
+                 caption={[Default Checkboxes] A prototype to give checkboxes a default state if nothing is selected.
+                          \emph{web/jsgui/checkbox/checkboxdefaults.js}}]%
+{web/jsgui/checkbox/checkboxdefaults.js}

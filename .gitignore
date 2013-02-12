@@ -13,3 +13,4 @@ boko
 .project
 .lein-failures
 target/
+^build/*

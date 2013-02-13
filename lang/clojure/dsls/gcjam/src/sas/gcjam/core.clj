@@ -1,2 +1,0 @@
-(ns sas.gcjam.core)
-

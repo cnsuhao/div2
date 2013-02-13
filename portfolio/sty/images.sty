@@ -1,0 +1,32 @@
+\ProvidesPackage{sty/images}
+
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{graphicx}
+
+\newcommand{\theimagesboundwidth}[0]{\textwidth}
+\newcommand{\theimagescount}[0]{3}
+\newcommand{\theimagesroot}[0]{}
+\newcommand{\imagesboundwidth}[1]{\renewcommand{\theimagesboundwidth}{#1}}
+\newcommand{\imagescount}[1]{\renewcommand{\theimagescount}{#1}}
+\newcommand{\imagesroot}[1]{\renewcommand{\theimagesroot}{#1}}
+
+\newcommand{\image}[2]{
+    \FPdiv\result{1.0}{\theimagescount}
+    \FPdiv\factor{\theimagescount}{100}
+    \FPsub\result{\result}{\factor}
+    \begin{subfigure}[b]{\result\textwidth}
+        \centering
+        \includegraphics[width=\theimagesboundwidth]{{\theimagesroot}/#1}
+        \caption{\centering{#2}}
+        \label{img:{#1}}
+    \end{subfigure}
+}
+
+\newenvironment{images}[3]
+{ \imagesroot{#1}
+  \imagescount{#2}
+  \imagesboundwidth{#3}
+  \begin{figure}[h!] }
+{ \end{figure} }
+%\newcommand{\courseself}[0]{\subsection*{Self Evaluation}}

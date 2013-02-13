@@ -4,8 +4,7 @@ These are the major homeworks from when I took Intro to AI in 2007.  They were
 written in Dr. Scheme.  I have not attempted to run these files recently, but
 they all should have some sort of log files and writeup document.  
 
-## Assignments:
- 1. **basic-searches**:  Depth/Breadth/Best first searches
- 2. **basic-rules**:  A simple rules engine
- 3. **astar**:  Using A\* to solve a number-sliding puzzle and N-queens
- 4. **gene-algo**:  Using genetic algorithms to figure out the best search and rescue team
+ * **basic-searches**  depth/breadth/best first searches
+ * **basic-rules**  simple rules engine
+ * **astar**  using astar to solve a number-sliding puzzle and N-queens
+ * **gene-algo**  genetic algorithm to figure out the best search and rescue team

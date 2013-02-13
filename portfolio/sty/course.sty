@@ -1,0 +1,78 @@
+\ProvidesPackage{sty/course}
+
+\RequirePackage{calc}
+\RequirePackage{totcount}
+\RequirePackage{multind}
+
+%\RequirePackage{sty/texpath}
+
+\makeindex{courseterm}
+\makeindex{coursecat}
+
+% abbreviations
+\global\def\IMGD{Interactive Media and Game Design}
+\global\def\CS{Computer Science}
+\global\def\ISP{Independent Study}
+\global\def\TA{Teaching Assistant}
+
+\makeatletter
+\expandafter\def\csname Term2012F\endcsname{2012-3@2012 Fall}
+\expandafter\def\csname Term2012J\endcsname{2012-1@2012 Jan}
+\expandafter\def\csname Term2012S\endcsname{2012-2@2012 Spring}
+\expandafter\def\csname Term2011F\endcsname{2011-3@2011 Fall}
+\expandafter\def\csname Term2011J\endcsname{2011-1@2011 Jan}
+\expandafter\def\csname Term2011S\endcsname{2011-2@2011 Spring}
+\expandafter\def\csname Term2010F\endcsname{2010-3@2010 Fall}
+\expandafter\def\csname Term2010J\endcsname{2010-1@2010 Jan}
+\expandafter\def\csname Term2010S\endcsname{2010-2@2010 Spring}
+
+
+\expandafter\def\csname Term2006A\endcsname{2006-3@2006 Fall (A)}
+\expandafter\def\csname Term2006B\endcsname{2006-4@2006 Fall (B)}
+\expandafter\def\csname Term2006C\endcsname{2006-1@2006 Spring (C)}
+\expandafter\def\csname Term2006D\endcsname{2006-2@2006 Spring (D)}
+\expandafter\def\csname Term2007A\endcsname{2007-3@2007 Fall (A)}
+\expandafter\def\csname Term2007B\endcsname{2007-4@2007 Fall (B)}
+\expandafter\def\csname Term2007C\endcsname{2007-1@2007 Spring (C)}
+\expandafter\def\csname Term2007D\endcsname{2007-2@2007 Spring (D)}
+\expandafter\def\csname Term2008A\endcsname{2008-3@2008 Fall (A)}
+\expandafter\def\csname Term2008B\endcsname{2008-4@2008 Fall (B)}
+\expandafter\def\csname Term2008C\endcsname{2008-1@2008 Spring (C)}
+\expandafter\def\csname Term2008D\endcsname{2008-2@2008 Spring (D)}
+
+\makeatother
+
+%%% Course Commands
+
+\newtotcounter{hampevalcount}
+\newtotcounter{wpicreditcount}
+
+\newcommand{\courseself}[0]{\subsection*{Self Evaluation}}
+\newcommand{\coursedesc}[0]{\subsection*{Course Description}}
+\newcommand{\coursegrade}[1]{\subsection*{Grade: #1}\stepcounter{wpicreditcount}}
+
+\makeatletter
+
+\newcommand{\crsshorthand}[2]{ \if\relax\detokenize{#1}\relax#2\else#1\fi }
+
+\newcommand{\crscatindex}[2]{ \index{coursecat}{#1!#2} }
+
+\newcommand{\crstermindex}[2]{
+    \def\@term{\csname Term#1\endcsname}
+    \index{courseterm}{\@term!#2}
+}
+
+\newcommand{\courseeval}[6][]{
+    \stepcounter{hampevalcount}
+    \def\@label{#6}
+    \def\@name{\crsshorthand{#1}{#4}}
+
+    \subsection*{Evaluation: #2 (#3)\\#4}
+    \ifx\@label\@empty\relax\else\label{sec:eval:hamp:#6}\fi
+    \crscatindex{#5}{\@name}
+    \crstermindex{#3}{\@name}
+}
+
+\makeatother
+%%% Structure
+\newcommand{\dividerpart}[1]{\part*{#1\addcontentsline{toc}{chapter}{~~\emph{#1}}}}

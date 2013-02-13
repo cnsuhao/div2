@@ -1,0 +1,61 @@
+\section{Automatic Lecture Recording (2 evals)}
+
+\begin{meta}
+    \mitem{Course}{IS-CS-200, IS-CS-200-7}
+    \mitem{Term}{2011 Jan, 2011 Spring}
+    \mitem{Prof}{Paul Dickson}
+    \mitem{Langs}{bash, python, javascript, c++}
+    \mitem{Libs}{Django, OpenCV}
+\end{meta}
+
+\courseself
+The largest portion of my first year at Hampshire was spent working on
+Paul's automated lecture recording system. Since I spent my time away
+from school learning linux system administration and python, this was a
+"final project" in many ways.
+
+Due to filing issues, one of my Spring studies actually took place
+during January. With Warshow, I spent Jan term working 10-15 hours a day
+to get the system up and running in time for the semester. This involved
+writing the capture software, bash/cron jobs, rewriting the web server,
+and connecting it all up. It was intense, but in the end we had the
+system more or less together by the time courses started.
+
+At first the system had some troubles, but I helped make sure to plan
+ahead during our crunch so it was more debugging than reworking. Pretty
+soon, it was trivial to add new courses to the system and aside from
+checking the status remotely or running a cleanup command, the system
+was running smoothly.
+
+That said, the system was quite hacky. It was stuck together with a few
+bash scripts, shell based mutex locks that spanned two servers, and
+other little nasties scattered throughout. Though working, it wasn't
+maintainable. This was fine though, since the system was due for a
+reworking that summer.
+
+During the semester, I intended to do more HCI design on the page.
+Sadly, the system did not seem far enough along to really analyze how
+people were using it or what could make it better.
+
+That isn't to say I wasn't busy. Instead I worked in all the other
+facets and did what little research and GUI stuff was available. I did
+get to help with the end of semester usability study. Also, since it
+was recording classes, the only time we could go in for repairs was at
+night, leaving us in a constant "crunch".
+
+While a challenging few months, I learned all about how hard and
+precarious it is to work on a production system. I learned how to better
+deal with things when they are on fire so it doesn't just catch fire
+again next week. I also got much better with the linux OS, specifically
+making separate programs play nicely together without a formal IPC. Most
+of all, I'm just glad I had already learned to plan for future features
+so most of the modifications were simple once things were running.
+
+This project taught me a fair amount about API interfaces: making sure
+to document and set everything up with the future in mind so that new
+components can just be dropped in with little effort. Early on I added
+django commands which proved useful so all it took to create new courses
+was a quick ssh command and editing the crontab.
+
+\loadtex[\vfill]{evals/lecture-build}
+\loadtex[\vspace{2in}\clearpage]{evals/lecture-hci}

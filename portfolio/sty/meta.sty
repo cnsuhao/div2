@@ -1,0 +1,34 @@
+\ProvidesPackage{sty/meta}
+
+\RequirePackage{mdframed}
+\RequirePackage{wrapfig}
+
+%%% Meta Info
+\def\metaentry#1{%
+  \begingroup
+  \edef\@tempa{#1,\space}%
+  \expandafter\endgroup
+  \expandafter\readentry\@tempa\relax
+}
+\def\readentry#1, #2\relax{%
+  \doentry{#1}%
+  \begingroup
+  \ifx\relax#2\relax % if #2 is empty
+      \def\next{\endgroup\endmetaentry}
+  \else
+      \def\next{\endgroup\readentry#2\relax}%
+  \fi
+  \next
+}
+\def\doentry#1{& #1 \\}
+\def\endmetaentry{}
+
+\newcommand{\mitem}[2]{\vspace{-8pt}\\\textbf{:#1:} \metaentry{#2}}%
+
+\newenvironment{meta}{
+    \begin{mdframed}
+    \begin{tabular}{r l}
+}{
+    \end{tabular}
+\end{mdframed}
+}

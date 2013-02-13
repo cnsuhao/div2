@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Pages
 class Page(models.Model):
     title   = models.CharField(max_length=30)
@@ -15,7 +14,6 @@ class PageMeta(models.Model):
 
 
 # Content
-
 class ContentSlotField(models.SlugField):
     def __init__(self, *args, **kwargs):
             kwargs['max_length']=15
@@ -32,7 +30,6 @@ class Content(models.Model):
     slug = models.SlugField(max_length=30, editable=False, primary_key=True)
     display  = models.CharField(max_length=50)
     template = models.TextField()
-
 
 
 # Style
@@ -74,7 +71,3 @@ class Homepage(models.Model):
 class Slide(models.Model):
     content = models.TextField()
 
-
-# Site
-class SiteSettings(models.Model):
-    pass

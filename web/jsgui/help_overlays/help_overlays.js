@@ -1,4 +1,3 @@
-
 function drawOverlays() {
 	$('*[help]').each(function (i) {
 		var overlay = document.createElement('div');

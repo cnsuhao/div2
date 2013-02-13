@@ -1,6 +1,5 @@
 """
-A simple Lock operator.  There is no real need for this anymore now that the with statement exists.
-
+A simple mutex Lock decorator.  
 """
 
 from functools import wraps
@@ -30,6 +29,5 @@ if __name__ == "__main__":
     @locked(lck)
     def f():
         print "I need the lock, and it is locked: %r" % lck.locked()
-
 
     f()

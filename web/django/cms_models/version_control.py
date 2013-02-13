@@ -19,8 +19,6 @@ class TrackHistory(models.Model):
         super(self.__class__,self).save()
 
     def save(self):
-        
-        
         if self.id and not getattr(self,'_TrackHistory__copied', False):
             old = copy_object(self)
             old._TrackHistory_current=False
@@ -34,8 +32,6 @@ class TrackHistory(models.Model):
         
         print self.__class__.objects.all()
         
-    def _save(self):
-        super(TrackHistory,self).save()
 
     @classmethod
     def _clear_history_after(cls, rev):
@@ -49,11 +45,14 @@ class TrackHistory(models.Model):
             kwargs['_revision'] = rev
             for k in kwargs:
                 print [k]
+
+            prev = cls.objects.get(**kwargs)
             obj = cls._objects.get(**kwargs)
-            old = cls.objects.get(**kwargs)
-            old._Track_History_current = False
-            obj._Track_History_current = True
-            old._save()
+
+            prev._Track_History_current = True
+            obj._Track_History_current = False
+
+            prev._save()
             obj._save()
         except cls.DoesNotExist: raise CannotRevert('obj/revision number does not exist')
         

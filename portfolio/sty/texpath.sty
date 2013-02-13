@@ -1,0 +1,12 @@
+\ProvidesPackage{sty/texpath}
+
+\newcommand{\thepath}{}
+\newcommand{\pushpath}[1]{\renewcommand{\thepath}{#1}}
+\newcommand{\poppath}{}
+\newcommand{\loadtex}[2][\newpage]{ 
+    {#1}
+    \pushpath{tex/#2.tex}
+    \input{tex/#2}
+    \poppath
+}
+

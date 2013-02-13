@@ -2,7 +2,7 @@
 
 A varitey of demos created with processing/quil.
 
- * **astar** demo of astar path finding (probably broken)
+ * **astar** demo of astar path finding (seems broken)
  * **noise** simple perlin noise
  * **quadtree** basic point quadtree demonstration
  * **salesmen** traveling salesman solved with naive genetic algorithm

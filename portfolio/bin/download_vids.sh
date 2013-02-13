@@ -9,6 +9,10 @@ if ! [ -e $CHECKSUM ]; then
     exit 1
 fi
 
+# make sure we are relative to checksum
+cd $(dirname $CHECKSUM_PATH)
+CHECKSUM_PATH=$(basename $CHECKSUM_PATH)
+
 function parse_vars {
     CHECKSUM=$1
     shift 1
@@ -26,6 +30,7 @@ function validate {
 
 function download {
     echo "Downloading '$FILE'..."
+    echo $URL
     curl -C - -# -o $FILE $URL
 }
 

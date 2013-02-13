@@ -1,0 +1,9 @@
+\ProvidesPackage{sty/github}
+
+\RequirePackage{hyperref}
+
+\global\def\thegithubrepo{http://github.com/alecgoebel/div2}
+
+\newcommand{\githubhref}{\begingroup \catcode`_=12 \dogithubhref}
+\newcommand{\dogithubhref}[1]{\texttt{\href{\thegithubrepo/blob/master/#1}{#1}}\endgroup}
+

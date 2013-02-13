@@ -1,11 +1,11 @@
 \documentclass[11pt,letterpaper]{report}
 
 %%% IMPORTS
-%\usepackage{wrapfig}
 \usepackage{parskip}
 \usepackage[explicit]{titlesec}
 \usepackage{pdfpages}
 \usepackage{fullpage}
+\usepackage{hyperref}
 
 \usepackage{fancyhdr}
 \usepackage{fp}
@@ -19,13 +19,13 @@
 \usepackage{sty/images}
 
 
-%%% Colors
-\definecolor{gray75}{gray}{0.75}
-
 %%% Chapter Formats
 \def\hsp{\hspace{10pt}}
 \titlespacing*{\chapter}{0pt}{0pt}{40pt}
 \titleformat{\chapter}[block]{\Huge\bfseries}{\thechapter\hsp$|$\hsp}{0pt}{#1}
+
+
+\newcommand{\mypart}[1]{\part*{\addcontentsline{toc}{part}{#1}#1}}
 
 
 %%% Headers/Footers
@@ -48,13 +48,13 @@
 \maketitle
 \tableofcontents
 
-\part{Contract}
+\mypart{Contract}
 \loadtex{retro}
 \loadtex{mcp}
 \loadtex{cel}
 
 
-\part{Coursework}
+\mypart{Coursework}
 \loadtex{courses/summary}
 
 %%% Part II formatting
@@ -102,11 +102,11 @@
 
 %\loadtex{courses/other}
 
-\part{Sample Works}
+\mypart{Sample Works}
 
 \chapter{Programming Languages}
-\loadtex{works/lang/about}
-\loadtex{works/lang/python}
+%\loadtex{works/lang/about}
+\loadtex[]{works/lang/python}
 \loadtex{works/lang/clojure}
 \loadtex{works/lang/js}
 \loadtex{works/lang/java}
@@ -115,27 +115,37 @@
 \loadtex{works/lang/ruby}
 
 %\loadtex{works/course}
+\chapter{Pygame Course}
+\Large{See \githubhref{pycourse}}
 
 \chapter{Game Development}
+\Large{See \githubhref{gamedev}}
 
 \chapter{Web Development}
-\loadtex{works/web/about}
-\loadtex{works/web/frontend}
+\loadtex[]{works/web/frontend}
 \loadtex{works/web/backend}
 \loadtex{works/web/django}
 \loadtex{works/web/php}
 
-%\chapter{Other Interfaces}
-%%\loadtex{works/ui/hci}
-%\loadtex{works/ui/android}
-
 \chapter{Other Code}
+\loadtex[]{works/other/ai}
+\loadtex{works/other/sysadmin}
+\loadtex{works/other/hacks}
 
 \chapter{Miscellaneous}
-\loadtex{works/other/waking}
+\loadtex[]{works/other/waking}
 \loadtex[\clearpage]{works/other/gamification}
 
 \appendix
+\mypart{Appendix}
+\loadtex{appendix/dir}
+%\loadtex{appendix/stats}
+
+\newpage
+\thispagestyle{plain}
+\mbox{}
+
+\addcontentsline{toc}{chapter}{Index}
 \printindex{coursecat}{Courses by Subject}
 \printindex{courseterm}{Courses by Chronology}
 

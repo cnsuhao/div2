@@ -40,3 +40,12 @@ easier, students could just run `./turnin.sh hwN` to run all the git
 commands for them. The system may have been overly complicated for first
 year programmers, but I can see something similar being used for a
 software engineering course.
+
+<!--
+for scraper
+ * **classcode** code written in class
+ * **homeworks** all homework assignments
+ * **internal** internal course files
+ * **samplecode** extra examples for final projects
+ * **turnin.sh** turnin script for github
+-->

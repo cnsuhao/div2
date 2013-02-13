@@ -225,9 +225,3 @@ if __name__=='__main__':
     
     sync(login, entries, opts.test)
 
-"""    
-
-contact.group_membership_info.append(gdata.contacts.GroupMembershipInfo(href=groups["My Test Group"]))
-gdataClient.UpdateContact(contact["entry"].GetEditLink().href, contact["entry"])
-
-"""

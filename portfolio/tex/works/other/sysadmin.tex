@@ -1,0 +1,21 @@
+\section{System Administration}
+
+I have been slowly becoming a proper sysadmin ever since I switched
+to Linux. In addition to my personal desktop I have admined a slew of
+web/soho/virtual servers over the years.
+
+At this point, creating scripts is second nature instead of just
+\emph{performing} a given task. The overlap between being able to code
+quickly and know what I want my machine to do has been invaluable. I
+finally got to push myself to my limits with the Lecture Recording
+project, being the first time I had to wire so many systems together
+with \texttt{bash} and maintain a production machine.
+
+\codeinput{lecrec/scripts/upload.sh}{Lecture Upload}{bash}{}
+{A script to upload a lecture once it is processed.  Since it was setup as a cronjob running every minute, it uses files as a mutex lock to prevent conflicts}
+
+\codeinput{lecrec/webmanic/courses/management/commands/addcourse.py}{Add Course Command}{Python}{}
+{As we started maintaining the server, being able to simply run commands to add presentations or courses via ssh rapidly became a requirement}
+
+\codeinput{lecrec/scripts/fps.py}{Frames Per Second Calculator}{Python}{}
+{Many scripts we created were simply utility scripts to do some sort of calculation/transformation on some files before passing it on to the next program or script.}

@@ -1,0 +1,18 @@
+\chapter*{Summary}
+\addcontentsline{toc}{chapter}{Summary}
+
+% TODO: do I need an overview of totally the courses and all that?
+%\begin{tabular} { r | l }
+
+\begingroup
+\newcounter{total}
+\addtocounter{total}{\totvalue{hampevalcount}}
+\addtocounter{total}{\totvalue{wpicreditcount}}
+
+\section*{Total Credits: \arabic{total}}
+\begin{description}
+    \item[Hampshire] \total{hampevalcount} evals
+    \item[WPI] \total{wpicreditcount} credits
+\end{description}
+
+\endgroup

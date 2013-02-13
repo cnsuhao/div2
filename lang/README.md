@@ -4,6 +4,6 @@ Sample code from a variety of languages I use most often.
 
  * **python** 
  * **clojure** 
- * **java** Game of Life Applet
+ * **java** game of life applet
  * **ruby** 
  * **bash**

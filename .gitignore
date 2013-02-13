@@ -13,4 +13,7 @@ boko
 .project
 .lein-failures
 target/
-build/*
+portfolio/build/*
+portfolio/*.idx
+portfolio/*.ilg
+portfolio/*.ind
